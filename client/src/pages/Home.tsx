@@ -1,18 +1,30 @@
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="bg-[#111111] text-white font-sans selection:bg-[#B7E39B] selection:text-[#111111]">
       
       {/* Navigation */}
-      <nav className="fixed w-full z-50 top-0 py-6 px-6 lg:px-12 flex items-center justify-between mix-blend-difference pointer-events-none">
-        <div className="pointer-events-auto flex items-center gap-3">
-           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <nav className="fixed w-full z-50 top-0 py-6 px-6 lg:px-12 flex items-center justify-between pointer-events-none">
+        <div className="pointer-events-auto flex items-center gap-3 bg-[#111]/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+           <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="32" height="32" rx="0" fill="#B7E39B"/>
            </svg>
-           <span className="font-semibold text-2xl tracking-tight uppercase">Gravity</span>
+           <span className="font-semibold text-xl tracking-tight uppercase">Gravity</span>
         </div>
-        <div className="pointer-events-auto hidden md:flex items-center gap-8 text-sm font-medium tracking-wider uppercase">
+        <div className="pointer-events-auto hidden md:flex items-center gap-8 text-sm font-medium tracking-wider uppercase bg-[#111]/80 backdrop-blur-md px-6 py-3 rounded-full border border-white/10">
            <a href="#work" className="hover:text-[#B7E39B] transition-colors">Work</a>
            <a href="#assessment" className="hover:text-[#B7E39B] transition-colors">Assessment</a>
         </div>
@@ -24,51 +36,63 @@ export default function Home() {
         {/* Floating Images - 6 images in corners */}
         <div className="absolute inset-0 z-0 pointer-events-none">
            {/* Top Left */}
-           <div className="absolute top-[10%] left-[5%] md:left-[8%] w-[200px] md:w-[300px] aspect-[4/3] opacity-60">
-              <img src="/src/assets/hero-bg.jpg" className="w-full h-full object-cover" alt=""/>
+           <div 
+             className="absolute top-[10%] left-[5%] md:left-[8%] w-[200px] md:w-[300px] aspect-[4/3] opacity-60 transition-transform duration-75 ease-out"
+             style={{ transform: `translateY(${scrollY * 0.15}px)` }}
+           >
+              <img src="/src/assets/hero-bg.jpg" className="w-full h-full object-cover rounded-sm" alt=""/>
            </div>
            {/* Top Right */}
-           <div className="absolute top-[15%] right-[5%] md:right-[8%] w-[180px] md:w-[250px] aspect-[3/2] opacity-60">
-              <img src="/src/assets/ucla.jpg" className="w-full h-full object-cover" alt=""/>
+           <div 
+             className="absolute top-[15%] right-[5%] md:right-[8%] w-[180px] md:w-[250px] aspect-[3/2] opacity-60 transition-transform duration-75 ease-out"
+             style={{ transform: `translateY(${scrollY * 0.25}px)` }}
+           >
+              <img src="/src/assets/ucla.jpg" className="w-full h-full object-cover rounded-sm" alt=""/>
            </div>
            {/* Bottom Left Pair */}
-           <div className="absolute bottom-[10%] left-[5%] md:left-[8%] flex gap-4 items-end opacity-60">
+           <div 
+             className="absolute bottom-[10%] left-[5%] md:left-[8%] flex gap-4 items-end opacity-60 transition-transform duration-75 ease-out"
+             style={{ transform: `translateY(-${scrollY * 0.1}px)` }}
+           >
               <div className="w-[150px] md:w-[200px] aspect-[4/3]">
-                 <img src="/src/assets/montgomery-college.jpg" className="w-full h-full object-cover" alt=""/>
+                 <img src="/src/assets/montgomery-college.jpg" className="w-full h-full object-cover rounded-sm" alt=""/>
               </div>
               <div className="w-[120px] md:w-[180px] aspect-[3/4]">
-                 <img src="/src/assets/hero-bg.jpg" className="w-full h-full object-cover" alt=""/>
+                 <img src="/src/assets/hero-bg.jpg" className="w-full h-full object-cover rounded-sm" alt=""/>
               </div>
            </div>
            {/* Bottom Right Pair */}
-           <div className="absolute bottom-[5%] right-[5%] md:right-[8%] flex gap-4 items-start opacity-60">
+           <div 
+             className="absolute bottom-[5%] right-[5%] md:right-[8%] flex gap-4 items-start opacity-60 transition-transform duration-75 ease-out"
+             style={{ transform: `translateY(-${scrollY * 0.2}px)` }}
+           >
               <div className="w-[180px] md:w-[220px] aspect-[4/3]">
-                 <img src="/src/assets/ucla.jpg" className="w-full h-full object-cover" alt=""/>
+                 <img src="/src/assets/ucla.jpg" className="w-full h-full object-cover rounded-sm" alt=""/>
               </div>
               <div className="w-[140px] md:w-[160px] aspect-[3/4] mt-8 md:mt-12">
-                 <img src="/src/assets/montgomery-college.jpg" className="w-full h-full object-cover" alt=""/>
+                 <img src="/src/assets/montgomery-college.jpg" className="w-full h-full object-cover rounded-sm" alt=""/>
               </div>
            </div>
         </div>
 
         {/* Center Text */}
         <div className="relative z-10 flex flex-col items-center text-center px-4 w-full max-w-[1000px] mt-8">
-          <h1 className="text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] font-medium leading-[1.05] tracking-tight mb-8">
+          <h1 className="text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] font-medium leading-[1.05] tracking-tight mb-8 drop-shadow-2xl">
             A Strong Institutional Brand<br/>
             is More Than Messaging.<br/>
             Does Yours Drive Enrollment?
           </h1>
-          <p className="text-lg md:text-[1.25rem] text-white/70 max-w-[700px] mb-12 leading-relaxed font-light">
+          <p className="text-lg md:text-[1.25rem] text-white/90 max-w-[700px] mb-12 leading-relaxed font-medium drop-shadow-lg">
             Let's shape what's next for your institution. Start with the assessment, explore real college success stories, or grab your chance for a free comprehensive brand audit.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 items-center w-full sm:w-auto">
-            <a href="#assessment" className="flex items-center gap-6 border border-[#B7E39B] text-[#B7E39B] hover:bg-[#B7E39B] hover:text-[#111] transition-colors duration-300 px-8 py-4 text-lg font-medium w-full sm:w-auto justify-between group rounded-none">
+            <a href="#assessment" className="flex items-center gap-6 bg-[#B7E39B] text-[#111] hover:bg-white hover:text-[#111] transition-colors duration-300 px-8 py-4 text-lg font-medium w-full sm:w-auto justify-between group rounded-sm shadow-xl">
               <span>Take the Quiz</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 66 76" fill="none" className="transform group-hover:translate-x-1 transition-transform">
                 <path d="M1 10.6182H65M65 10.6182V74.6182M65 10.6182L1 74.6182" stroke="currentColor" strokeWidth="6"></path>
               </svg>
             </a>
-            <a href="#audit" className="flex items-center gap-6 border border-[#B7E39B] text-[#B7E39B] hover:bg-[#B7E39B] hover:text-[#111] transition-colors duration-300 px-8 py-4 text-lg font-medium w-full sm:w-auto justify-between group rounded-none">
+            <a href="#audit" className="flex items-center gap-6 bg-[#111]/80 backdrop-blur-md border border-[#B7E39B] text-[#B7E39B] hover:bg-[#B7E39B] hover:text-[#111] transition-colors duration-300 px-8 py-4 text-lg font-medium w-full sm:w-auto justify-between group rounded-sm shadow-xl">
               <span>Win a Free Brand Audit</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 66 76" fill="none" className="transform group-hover:translate-x-1 transition-transform">
                 <path d="M1 10.6182H65M65 10.6182V74.6182M65 10.6182L1 74.6182" stroke="currentColor" strokeWidth="6"></path>
@@ -175,7 +199,7 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-white/60 mb-12 font-light leading-relaxed max-w-lg">
               Find out if your institution's brand story reflects its full potential and is driving measurable growth.
             </p>
-            <a href="#" className="inline-flex items-center gap-6 border border-[#B7E39B] text-[#B7E39B] hover:bg-[#B7E39B] hover:text-[#111] transition-colors duration-300 px-8 py-5 font-medium text-lg justify-between group rounded-none w-full sm:w-auto">
+            <a href="#" className="inline-flex items-center gap-6 border border-[#B7E39B] text-[#B7E39B] hover:bg-[#B7E39B] hover:text-[#111] transition-colors duration-300 px-8 py-5 font-medium text-lg justify-between group rounded-sm w-full sm:w-auto">
               <span>Start Quiz</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 66 76" fill="none" className="transform group-hover:translate-x-1 transition-transform">
                 <path d="M1 10.6182H65M65 10.6182V74.6182M65 10.6182L1 74.6182" stroke="currentColor" strokeWidth="6"></path>
@@ -202,7 +226,7 @@ export default function Home() {
           <p className="text-xl md:text-2xl opacity-80 mb-12 font-medium leading-relaxed">
             One institution will receive a complimentary 1:1 Enrollment Acceleration Workshop — a private working session with Gravity experts focused on identifying enrollment friction and mapping growth opportunities.
           </p>
-          <a href="#" className="inline-flex items-center gap-6 border border-[#111] text-[#111] hover:bg-[#111] hover:text-[#B7E39B] transition-colors duration-300 px-10 py-5 font-medium text-xl justify-between group rounded-none">
+          <a href="#" className="inline-flex items-center gap-6 border border-[#111] text-[#111] hover:bg-[#111] hover:text-[#B7E39B] transition-colors duration-300 px-10 py-5 font-medium text-xl justify-between group rounded-sm">
             <span>Enter Now</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 66 76" fill="none" className="transform group-hover:translate-x-1 transition-transform">
               <path d="M1 10.6182H65M65 10.6182V74.6182M65 10.6182L1 74.6182" stroke="currentColor" strokeWidth="6"></path>
