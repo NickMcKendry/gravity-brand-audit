@@ -46,7 +46,7 @@ export default function Home() {
              className="absolute top-[8%] left-[2%] w-[22vw] max-w-[320px] aspect-[4/3] opacity-[0.35] grayscale transition-transform duration-75 ease-out"
              style={{ transform: `translateY(${scrollY * 0.1}px)` }}
            >
-              <img src="/src/assets/hero-bg.jpg" className="w-full h-full object-cover" alt=""/>
+              <img src="/assets/hero-bg.jpg" className="w-full h-full object-cover" alt=""/>
            </div>
            
            {/* Top Right */}
@@ -54,7 +54,7 @@ export default function Home() {
              className="absolute top-[12%] right-[2%] w-[18vw] max-w-[260px] aspect-[3/2] opacity-[0.25] grayscale transition-transform duration-75 ease-out"
              style={{ transform: `translateY(${scrollY * 0.18}px)` }}
            >
-              <img src="/src/assets/ucla.jpg" className="w-full h-full object-cover" alt=""/>
+              <img src="/assets/ucla.jpg" className="w-full h-full object-cover" alt=""/>
            </div>
            
            {/* Bottom Left Group */}
@@ -63,10 +63,10 @@ export default function Home() {
              style={{ transform: `translateY(-${scrollY * 0.1}px)` }}
            >
               <div className="w-[18vw] max-w-[240px] aspect-[4/3] opacity-[0.45] grayscale">
-                 <img src="/src/assets/montgomery-college.jpg" className="w-full h-full object-cover" alt=""/>
+                 <img src="/assets/montgomery-college.jpg" className="w-full h-full object-cover" alt=""/>
               </div>
               <div className="w-[20vw] max-w-[280px] aspect-[3/4] opacity-[0.35] grayscale">
-                 <img src="/src/assets/hero-bg.jpg" className="w-full h-full object-cover" alt=""/>
+                 <img src="/assets/hero-bg.jpg" className="w-full h-full object-cover" alt=""/>
               </div>
            </div>
            
@@ -76,10 +76,10 @@ export default function Home() {
              style={{ transform: `translateY(-${scrollY * 0.15}px)` }}
            >
               <div className="w-[18vw] max-w-[260px] aspect-[4/3] opacity-[0.35] grayscale">
-                 <img src="/src/assets/ucla.jpg" className="w-full h-full object-cover" alt=""/>
+                 <img src="/assets/ucla.jpg" className="w-full h-full object-cover" alt=""/>
               </div>
               <div className="w-[14vw] max-w-[190px] aspect-[3/4] mt-24 opacity-[0.45] grayscale">
-                 <img src="/src/assets/montgomery-college.jpg" className="w-full h-full object-cover" alt=""/>
+                 <img src="/assets/montgomery-college.jpg" className="w-full h-full object-cover" alt=""/>
               </div>
            </div>
         </div>
@@ -153,7 +153,7 @@ export default function Home() {
                </div>
 
                <div className="w-full aspect-[4/3] lg:aspect-[3/4] max-h-[85vh] relative overflow-hidden bg-[#1a1a1a]">
-                  <img src="/src/assets/montgomery-college.jpg" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="Montgomery College" />
+                  <img src="/assets/montgomery-college.jpg" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="Montgomery College" />
                </div>
 
             </div>
@@ -184,7 +184,7 @@ export default function Home() {
                </div>
 
                <div className="w-full aspect-[4/3] lg:aspect-[3/4] max-h-[85vh] relative overflow-hidden bg-[#1a1a1a]">
-                  <img src="/src/assets/ucla.jpg" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="UCLA" />
+                  <img src="/assets/ucla.jpg" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="UCLA" />
                </div>
 
             </div>
