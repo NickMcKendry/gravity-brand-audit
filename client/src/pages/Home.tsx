@@ -1,4 +1,53 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+
+const ScrollRevealText = ({ text, className = "", startOffset = 0.85, endOffset = 0.3 }: { text: string, className?: string, startOffset?: number, endOffset?: number }) => {
+  const containerRef = useRef<HTMLSpanElement>(null);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      const startReveal = windowHeight * startOffset;
+      const endReveal = windowHeight * endOffset;
+      
+      const elementTop = rect.top;
+      
+      let p = (startReveal - elementTop) / (startReveal - endReveal);
+      p = Math.max(0, Math.min(1, p));
+      setProgress(p);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Check on mount
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [startOffset, endOffset]);
+
+  const words = text.split(" ");
+  
+  return (
+    <span ref={containerRef} className={className}>
+      {words.map((word, i) => {
+        const start = i / words.length;
+        const end = (i + 1) / words.length;
+        let opacity = 0.2;
+        
+        if (progress > start) {
+          const wordProgress = (progress - start) / (end - start);
+          opacity = 0.2 + (Math.min(1, wordProgress) * 0.8);
+        }
+        
+        return (
+          <span key={i} style={{ opacity, transition: 'opacity 0.2s ease-out' }}>
+            {word}{" "}
+          </span>
+        );
+      })}
+    </span>
+  );
+};
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -87,12 +136,10 @@ export default function Home() {
         {/* Center Text */}
         <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-[1200px] mix-blend-difference text-white">
           <h1 className="text-[3.5rem] sm:text-[5rem] md:text-[6.5rem] lg:text-[7.5rem] font-medium leading-[1] tracking-[-0.03em] mb-10 text-white">
-            A Strong Institutional Brand<br/>
-            is More Than Messaging.<br/>
-            <span className="text-white/60">Does Yours Drive Enrollment?</span>
+            <ScrollRevealText text="A Strong Institutional Brand is More Than Messaging. Does Yours Drive Enrollment?" startOffset={0.9} endOffset={0.5} />
           </h1>
-          <p className="text-xl md:text-[1.4rem] text-white/60 max-w-[760px] mb-16 leading-[1.6] font-light">
-            Let's shape what's next for your institution. Start with the assessment, explore real college success stories, or grab your chance for a free comprehensive brand audit.
+          <p className="text-xl md:text-[1.4rem] text-white max-w-[760px] mb-16 leading-[1.6] font-light">
+            <ScrollRevealText text="Let's shape what's next for your institution. Start with the assessment, explore real college success stories, or grab your chance for a free comprehensive brand audit." startOffset={0.9} endOffset={0.6} />
           </p>
           <div className="flex flex-col sm:flex-row gap-6 items-center justify-center w-full">
             <a href="#assessment" className="group flex items-center justify-between gap-12 border border-[#B7E39B] bg-transparent hover:bg-[#B7E39B] text-[#B7E39B] hover:text-[#111] transition-all duration-300 px-10 py-5 text-lg font-medium w-full sm:w-auto min-w-[300px]">
@@ -110,13 +157,15 @@ export default function Home() {
       {/* Intro Section */}
       <section className="bg-[#111111] py-40 lg:py-56 px-6 lg:px-16 relative z-20">
         <div className="max-w-[1400px] mx-auto">
-          <p className="text-[13px] font-semibold tracking-[0.25em] uppercase text-[#B7E39B] mb-12">Our Focus on Institutions</p>
+          <p className="text-[13px] font-semibold tracking-[0.25em] uppercase text-[#B7E39B] mb-12">
+            Our Focus on Institutions
+          </p>
           <div className="max-w-[1200px]">
              <h2 className="text-[3rem] md:text-[4.5rem] lg:text-[5.5rem] font-medium leading-[1.05] tracking-[-0.02em] mb-10 text-white">
-               From first awareness to active advocacy, <span className="text-white/30">leading institutions are designing experiences that turn students into ambassadors.</span>
+               <ScrollRevealText text="From first awareness to active advocacy, leading institutions are designing experiences that turn students into ambassadors." />
              </h2>
-             <p className="text-2xl lg:text-[1.75rem] text-white/40 leading-[1.6] font-light max-w-[860px]">
-               See how institutions like Montgomery College and UCLA align brand strategy with the student journey.
+             <p className="text-2xl lg:text-[1.75rem] text-white leading-[1.6] font-light max-w-[860px]">
+               <ScrollRevealText text="See how institutions like Montgomery College and UCLA align brand strategy with the student journey." />
              </p>
           </div>
         </div>
@@ -133,20 +182,30 @@ export default function Home() {
                   <div>
                     <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">Montgomery College</p>
                     <h2 className="text-[3.5rem] md:text-[5rem] lg:text-[6rem] leading-[1] font-medium text-white tracking-[-0.02em]">
-                      Showcasing Exceptional Education & Outcomes
+                      <ScrollRevealText text="Showcasing Exceptional Education & Outcomes" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
-                  <div className="space-y-6 text-white/50 text-xl lg:text-[1.35rem] font-light leading-[1.6]">
-                    <p><strong className="text-white/80 font-medium">The Challenge:</strong> Montgomery College set out to reframe its story—shifting perceptions of what a community college can be. The goal was to attract more students, deepen pride among alumni, and unify teams.</p>
-                    <p><strong className="text-white/80 font-medium">Our Approach:</strong> Gravity began by engaging deeply with the College community through workshops and learner surveys. These insights informed the development of a new brand platform.</p>
+                  <div className="space-y-6 text-white text-xl lg:text-[1.35rem] font-light leading-[1.6]">
+                    <p>
+                      <strong className="text-white font-medium">The Challenge:</strong> <br/>
+                      <ScrollRevealText text="Montgomery College set out to reframe its story—shifting perceptions of what a community college can be. The goal was to attract more students, deepen pride among alumni, and unify teams." startOffset={0.9} endOffset={0.6} />
+                    </p>
+                    <p>
+                      <strong className="text-white font-medium">Our Approach:</strong> <br/>
+                      <ScrollRevealText text="Gravity began by engaging deeply with the College community through workshops and learner surveys. These insights informed the development of a new brand platform." startOffset={0.9} endOffset={0.6} />
+                    </p>
                   </div>
                   <div className="grid grid-cols-2 gap-12 pt-12 border-t border-white/10 mt-6">
                      <div>
-                       <div className="text-[4.5rem] lg:text-[5.5rem] font-medium text-white leading-none mb-4 tracking-tighter">100%</div>
+                       <div className="text-[4.5rem] lg:text-[5.5rem] font-medium text-white leading-none mb-4 tracking-tighter">
+                          <ScrollRevealText text="100%" startOffset={0.9} endOffset={0.7} />
+                       </div>
                        <div className="text-[12px] text-[#B7E39B] uppercase tracking-[0.2em] font-semibold">Leadership adoption</div>
                      </div>
                      <div>
-                       <div className="text-[4.5rem] lg:text-[5.5rem] font-medium text-white leading-none mb-4 tracking-tighter">3</div>
+                       <div className="text-[4.5rem] lg:text-[5.5rem] font-medium text-white leading-none mb-4 tracking-tighter">
+                          <ScrollRevealText text="3" startOffset={0.9} endOffset={0.7} />
+                       </div>
                        <div className="text-[12px] text-[#B7E39B] uppercase tracking-[0.2em] font-semibold">Creative platforms</div>
                      </div>
                   </div>
@@ -167,18 +226,33 @@ export default function Home() {
                   <div>
                     <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">UCLA</p>
                     <h2 className="text-[3.5rem] md:text-[5rem] lg:text-[6rem] leading-[1] font-medium text-white tracking-[-0.02em]">
-                      Research Powers Miracles at UCLA
+                      <ScrollRevealText text="Research Powers Miracles at UCLA" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
-                  <div className="space-y-6 text-white/50 text-xl lg:text-[1.35rem] font-light leading-[1.6]">
-                    <p><strong className="text-white/80 font-medium">The Challenge:</strong> UCLA wanted a story that wouldn't feel like another "university video." It needed to feel warm and personal, not institutional, while speaking to a wide audience.</p>
-                    <p><strong className="text-white/80 font-medium">Our Approach:</strong> Instead of big promises, UCLA had an opportunity to tell a true story only they could tell: research that directly changes a person's life, plus the community that makes those breakthroughs possible.</p>
+                  <div className="space-y-6 text-white text-xl lg:text-[1.35rem] font-light leading-[1.6]">
+                    <p>
+                      <strong className="text-white font-medium">The Challenge:</strong> <br/>
+                      <ScrollRevealText text="UCLA wanted a story that wouldn't feel like another 'university video.' It needed to feel warm and personal, not institutional, while speaking to a wide audience." startOffset={0.9} endOffset={0.6} />
+                    </p>
+                    <p>
+                      <strong className="text-white font-medium">Our Approach:</strong> <br/>
+                      <ScrollRevealText text="Instead of big promises, UCLA had an opportunity to tell a true story only they could tell: research that directly changes a person's life, plus the community that makes those breakthroughs possible." startOffset={0.9} endOffset={0.6} />
+                    </p>
                   </div>
                   <div className="pt-12 border-t border-white/10 mt-6">
-                     <ul className="space-y-6 text-xl lg:text-[1.35rem] font-light">
-                       <li className="flex gap-6 items-start"><span className="text-[#B7E39B] font-medium">/</span><span className="text-white/60">Show UCLA's impact beyond campus</span></li>
-                       <li className="flex gap-6 items-start"><span className="text-[#B7E39B] font-medium">/</span><span className="text-white/60">Make complex science feel human</span></li>
-                       <li className="flex gap-6 items-start"><span className="text-[#B7E39B] font-medium">/</span><span className="text-white/60">Reinforce lifelong connection</span></li>
+                     <ul className="space-y-6 text-xl lg:text-[1.35rem] font-light text-white">
+                       <li className="flex gap-6 items-start">
+                         <span className="text-[#B7E39B] font-medium">/</span>
+                         <ScrollRevealText text="Show UCLA's impact beyond campus" startOffset={0.9} endOffset={0.7} />
+                       </li>
+                       <li className="flex gap-6 items-start">
+                         <span className="text-[#B7E39B] font-medium">/</span>
+                         <ScrollRevealText text="Make complex science feel human" startOffset={0.9} endOffset={0.7} />
+                       </li>
+                       <li className="flex gap-6 items-start">
+                         <span className="text-[#B7E39B] font-medium">/</span>
+                         <ScrollRevealText text="Reinforce lifelong connection" startOffset={0.9} endOffset={0.7} />
+                       </li>
                      </ul>
                   </div>
                </div>
@@ -197,10 +271,10 @@ export default function Home() {
         <div className="max-w-[1500px] mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <div className="order-2 lg:order-1">
             <h2 className="text-[4rem] md:text-[5.5rem] lg:text-[7rem] font-medium leading-[1] tracking-[-0.02em] mb-10 text-white">
-              The 3-Minute <br/> Enrollment Check
+              <ScrollRevealText text="The 3-Minute Enrollment Check" />
             </h2>
-            <p className="text-xl lg:text-[1.5rem] text-white/50 mb-14 font-light leading-[1.6] max-w-[600px]">
-              Find out if your institution's brand story reflects its full potential and is driving measurable growth.
+            <p className="text-xl lg:text-[1.5rem] text-white mb-14 font-light leading-[1.6] max-w-[600px]">
+              <ScrollRevealText text="Find out if your institution's brand story reflects its full potential and is driving measurable growth." />
             </p>
             <a href="#" className="group inline-flex items-center justify-between gap-12 border border-[#B7E39B] bg-[#B7E39B] hover:bg-transparent text-[#111] hover:text-[#B7E39B] transition-all duration-300 px-10 py-5 font-medium text-lg w-full sm:w-auto min-w-[320px]">
               <span className="tracking-wide">Start Quiz</span>
@@ -210,8 +284,12 @@ export default function Home() {
           
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="w-[85vw] max-w-[550px] aspect-square border border-white/10 rounded-full flex flex-col items-center justify-center p-16 lg:p-24 text-center relative group overflow-hidden bg-transparent transition-all duration-700 hover:border-[#B7E39B]/40 hover:bg-[#B7E39B]/5 cursor-pointer">
-              <h3 className="text-3xl md:text-[2.75rem] font-medium mb-6 relative z-10 text-white group-hover:text-[#B7E39B] transition-colors duration-500 tracking-tight leading-[1.1]">Is Your Brand Driving Growth?</h3>
-              <p className="text-white/40 relative z-10 text-lg lg:text-xl font-light leading-[1.6] group-hover:text-white/70 transition-colors duration-500">A 3-minute executive assessment for Presidents, CMOs, and Enrollment Leaders.</p>
+              <h3 className="text-3xl md:text-[2.75rem] font-medium mb-6 relative z-10 text-white group-hover:text-[#B7E39B] transition-colors duration-500 tracking-tight leading-[1.1]">
+                 Is Your Brand Driving Growth?
+              </h3>
+              <p className="text-white/40 relative z-10 text-lg lg:text-xl font-light leading-[1.6] group-hover:text-white/70 transition-colors duration-500">
+                 A 3-minute executive assessment for Presidents, CMOs, and Enrollment Leaders.
+              </p>
             </div>
           </div>
         </div>
