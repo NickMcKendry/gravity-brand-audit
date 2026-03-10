@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from "react";
-import { PopupButton } from '@typeform/embed-react';
 
 const ScrollRevealText = ({ text, className = "", startOffset = 0.85, endOffset = 0.3 }: { text: string, className?: string, startOffset?: number, endOffset?: number }) => {
   const containerRef = useRef<HTMLSpanElement>(null);
@@ -157,7 +156,7 @@ export default function Home() {
       <section className="bg-[#111111] py-40 lg:py-56 px-6 lg:px-16 relative z-20">
         <div className="max-w-[1400px] mx-auto">
           <p className="text-[13px] font-semibold tracking-[0.25em] uppercase text-[#B7E39B] mb-12">
-            Our Focus on Institutions
+            Brand Clarity That Drives Enrollment
           </p>
           <div className="max-w-[1200px]">
              <h2 className="text-[3rem] md:text-[4.5rem] lg:text-[5.5rem] font-medium leading-[1.05] tracking-[-0.02em] mb-10 text-white">
@@ -294,27 +293,27 @@ export default function Home() {
       <section id="assessment" className="py-40 lg:py-56 px-6 lg:px-16 bg-[#111111] relative z-20 border-t border-white/10">
         <div className="max-w-[1500px] mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-[4rem] md:text-[5.5rem] lg:text-[7rem] font-medium leading-[1] tracking-[-0.02em] mb-10 text-white">
-              <ScrollRevealText text="The 3-Minute Enrollment Check" />
+            <h2 className="text-[3rem] md:text-[4.5rem] lg:text-[5.5rem] font-medium leading-[1] tracking-[-0.02em] mb-10 text-white">
+              <ScrollRevealText text="Take the Assessment" />
             </h2>
             <p className="text-xl lg:text-[1.5rem] text-white mb-14 font-light leading-[1.6] max-w-[600px]">
-              <ScrollRevealText text="Find out if your institution's brand story reflects its full potential and is driving measurable growth." />
+              <ScrollRevealText text="A short executive assessment designed to reveal how well your brand strategy supports enrollment performance." />
             </p>
-            <PopupButton id="f73a9593-84f5-45cf-b1c1-d2639c2f1cb3" className="group inline-flex items-center justify-between gap-12 border border-[#B7E39B] bg-[#B7E39B] hover:bg-transparent text-[#111] hover:text-[#B7E39B] transition-all duration-300 px-10 py-5 font-medium text-lg w-full sm:w-auto min-w-[320px]">
-              <span className="tracking-wide">Start Quiz</span>
+            <button onClick={() => window.open('https://form.typeform.com/to/f73a9593', '_blank')} className="group inline-flex items-center justify-between gap-12 border border-[#B7E39B] bg-[#B7E39B] hover:bg-transparent text-[#111] hover:text-[#B7E39B] transition-all duration-300 px-10 py-5 font-medium text-lg w-full sm:w-auto min-w-[320px]">
+              <span className="tracking-wide">Start Assessment</span>
               <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-            </PopupButton>
+            </button>
           </div>
           
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <PopupButton id="f73a9593-84f5-45cf-b1c1-d2639c2f1cb3" className="w-[85vw] max-w-[550px] aspect-square border border-white/10 rounded-full flex flex-col items-center justify-center p-16 lg:p-24 text-center relative group overflow-hidden bg-transparent transition-all duration-700 hover:border-[#B7E39B]/40 hover:bg-[#B7E39B]/5 cursor-pointer">
+            <div onClick={() => window.open('https://form.typeform.com/to/f73a9593', '_blank')} className="w-[85vw] max-w-[550px] aspect-square border border-white/10 rounded-full flex flex-col items-center justify-center p-16 lg:p-24 text-center relative group overflow-hidden bg-transparent transition-all duration-700 hover:border-[#B7E39B]/40 hover:bg-[#B7E39B]/5 cursor-pointer">
               <h3 className="text-3xl md:text-[2.75rem] font-medium mb-6 relative z-10 text-white group-hover:text-[#B7E39B] transition-colors duration-500 tracking-tight leading-[1.1]">
                  Is Your Brand Driving Measurable Enrollment Growth?
               </h3>
               <p className="text-white/40 relative z-10 text-lg lg:text-xl font-light leading-[1.6] group-hover:text-white/70 transition-colors duration-500">
                  A 3-minute executive assessment for Presidents, CMOs, and Enrollment Leaders.
               </p>
-            </PopupButton>
+            </div>
           </div>
         </div>
       </section>
@@ -322,14 +321,14 @@ export default function Home() {
       {/* Brand Audit Banner */}
       <section id="audit" className="py-40 lg:py-56 px-6 lg:px-16 bg-[#B7E39B] text-[#111111] text-center">
         <div className="max-w-[1400px] mx-auto flex flex-col items-center">
-          <h2 className="text-[4.5rem] md:text-[7rem] lg:text-[9rem] font-medium leading-[0.95] tracking-[-0.03em] mb-12">
-            Win a Free <br className="hidden md:block"/> Brand Audit
+          <h2 className="text-[3.5rem] md:text-[5.5rem] lg:text-[7rem] font-medium leading-[0.95] tracking-[-0.03em] mb-12">
+            Request Enrollment <br className="hidden md:block"/> Workshop
           </h2>
           <p className="text-xl lg:text-[1.75rem] opacity-80 mb-16 font-medium leading-[1.5] max-w-[1000px] mx-auto">
             One institution will receive a complimentary 1:1 Enrollment Acceleration Workshop — a private working session with Gravity experts focused on identifying enrollment friction and mapping growth opportunities.
           </p>
           <a href="#" className="group inline-flex items-center justify-between gap-12 border border-[#111111] bg-transparent hover:bg-[#111111] text-[#111111] hover:text-[#B7E39B] transition-all duration-300 px-12 py-6 font-medium text-xl w-full sm:w-auto min-w-[340px]">
-            <span className="tracking-wide">Enter Now</span>
+            <span className="tracking-wide">Request Workshop</span>
             <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
           </a>
         </div>
@@ -338,11 +337,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-24 px-6 lg:px-16 bg-[#111111] border-t border-white/10">
         <div className="max-w-[1500px] mx-auto flex flex-col lg:flex-row justify-between items-center gap-12">
-          <div className="flex items-center gap-4">
-             <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="32" height="32" fill="#B7E39B"/>
-             </svg>
-             <span className="font-semibold text-2xl tracking-[0.2em] uppercase text-white mt-1">Gravity</span>
+          <div className="flex items-center">
+             <img src="/assets/gravity-logo.png" alt="Gravity Global" className="h-10 w-auto" />
           </div>
           <div className="flex gap-16 text-[12px] text-white/50 uppercase tracking-[0.2em] font-semibold mt-1">
             <a href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</a>
