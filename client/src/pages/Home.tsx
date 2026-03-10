@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { PopupButton } from '@typeform/embed-react';
 
 const ScrollRevealText = ({ text, className = "", startOffset = 0.85, endOffset = 0.3 }: { text: string, className?: string, startOffset?: number, endOffset?: number }) => {
   const containerRef = useRef<HTMLSpanElement>(null);
@@ -73,14 +74,12 @@ export default function Home() {
       
       {/* Navigation */}
       <nav className="fixed w-full z-50 top-0 py-8 px-6 lg:px-16 flex items-center justify-between pointer-events-none mix-blend-difference text-white">
-        <div className="pointer-events-auto flex items-center gap-4">
-           <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="32" height="32" fill="white"/>
-           </svg>
-           <span className="font-semibold text-xl tracking-[0.2em] uppercase mt-1">Gravity</span>
+        <div className="pointer-events-auto flex items-center">
+           <img src="/assets/gravity-logo.png" alt="Gravity Global" className="h-8 md:h-10 w-auto" />
         </div>
         <div className="pointer-events-auto hidden md:flex items-center gap-12 text-[12px] font-semibold tracking-[0.2em] uppercase mt-1">
            <a href="#work" className="hover:opacity-50 transition-opacity duration-300">Work</a>
+           <a href="#gps" className="hover:opacity-50 transition-opacity duration-300">GPS</a>
            <a href="#assessment" className="hover:opacity-50 transition-opacity duration-300">Assessment</a>
         </div>
       </nav>
@@ -135,19 +134,19 @@ export default function Home() {
 
         {/* Center Text */}
         <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-[1200px] mix-blend-difference text-white">
-          <h1 className="text-[3.5rem] sm:text-[5rem] md:text-[6.5rem] lg:text-[7.5rem] font-medium leading-[1] tracking-[-0.03em] mb-10 text-white">
+          <h1 className="text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] font-medium leading-[1] tracking-[-0.03em] mb-10 text-white">
             <ScrollRevealText text="A Strong Institutional Brand is More Than Messaging. Does Yours Drive Enrollment?" startOffset={0.9} endOffset={0.5} />
           </h1>
           <p className="text-xl md:text-[1.4rem] text-white max-w-[760px] mb-16 leading-[1.6] font-light">
-            <ScrollRevealText text="Let's shape what's next for your institution. Start with the assessment, explore real college success stories, or grab your chance for a free comprehensive brand audit." startOffset={0.9} endOffset={0.6} />
+            <ScrollRevealText text="Start with the three-minute enrollment assessment. Identify how effectively your brand supports enrollment growth and whether your institution may qualify for a complimentary Enrollment Acceleration Workshop." startOffset={0.9} endOffset={0.6} />
           </p>
           <div className="flex flex-col sm:flex-row gap-6 items-center justify-center w-full">
             <a href="#assessment" className="group flex items-center justify-between gap-12 border border-[#B7E39B] bg-transparent hover:bg-[#B7E39B] text-[#B7E39B] hover:text-[#111] transition-all duration-300 px-10 py-5 text-lg font-medium w-full sm:w-auto min-w-[300px]">
-              <span className="tracking-wide">Take the Quiz</span>
+              <span className="tracking-wide">Take the Assessment</span>
               <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
             </a>
             <a href="#audit" className="group flex items-center justify-between gap-12 border border-white/30 bg-transparent hover:border-white hover:bg-white text-white hover:text-[#111] transition-all duration-300 px-10 py-5 text-lg font-medium w-full sm:w-auto min-w-[300px]">
-              <span className="tracking-wide">Win a Free Brand Audit</span>
+              <span className="tracking-wide">Request Enrollment Workshop</span>
               <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
             </a>
           </div>
@@ -165,7 +164,7 @@ export default function Home() {
                <ScrollRevealText text="From first awareness to active advocacy, leading institutions are designing experiences that turn students into ambassadors." />
              </h2>
              <p className="text-2xl lg:text-[1.75rem] text-white leading-[1.6] font-light max-w-[860px]">
-               <ScrollRevealText text="See how institutions like Montgomery College and UCLA align brand strategy with the student journey." />
+               <ScrollRevealText text="See how institutions like Montgomery College and UCLA align brand strategy with the student journey to increase engagement, enrollment, and long-term student advocacy." />
              </p>
           </div>
         </div>
@@ -182,32 +181,50 @@ export default function Home() {
                   <div>
                     <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">Montgomery College</p>
                     <h2 className="text-[3.5rem] md:text-[5rem] lg:text-[6rem] leading-[1] font-medium text-white tracking-[-0.02em]">
-                      <ScrollRevealText text="Showcasing Exceptional Education & Outcomes" startOffset={0.9} endOffset={0.5} />
+                      <ScrollRevealText text="Showcasing Exceptional Education & Extraordinary Outcomes" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
                   <div className="space-y-6 text-white text-xl lg:text-[1.35rem] font-light leading-[1.6]">
                     <p>
                       <strong className="text-white font-medium">The Challenge:</strong> <br/>
-                      <ScrollRevealText text="Montgomery College set out to reframe its story—shifting perceptions of what a community college can be. The goal was to attract more students, deepen pride among alumni, and unify teams." startOffset={0.9} endOffset={0.6} />
+                      <ScrollRevealText text="Montgomery College set out to reframe its story—shifting perceptions of what a community college can be. Widely recognized as Maryland’s top community college and a nationally ranked institution, the College wanted to showcase the transformative outcomes already happening on its campuses and in its community. The goal was to attract more students, deepen pride among alumni and stakeholders, and unify teams around a shared vision. Yet internal silos, inconsistent data practices, and differing perspectives on brand priorities made it challenging to present one clear, compelling story to the world." startOffset={0.9} endOffset={0.6} />
                     </p>
                     <p>
                       <strong className="text-white font-medium">Our Approach:</strong> <br/>
-                      <ScrollRevealText text="Gravity began by engaging deeply with the College community through workshops and learner surveys. These insights informed the development of a new brand platform." startOffset={0.9} endOffset={0.6} />
+                      <ScrollRevealText text="Gravity began by engaging deeply with the college community through workshops and learner surveys, capturing authentic experiences across students, faculty, staff, and alumni. These insights informed the development of a new brand platform and visual identity anchored by the unifying message, “Exceptional Education. Extraordinary Outcomes.” To support long-term adoption, we helped align internal teams through brand training, organizational process improvements, and a clear brand architecture, enabling Montgomery College to communicate a cohesive and aspirational story across its enrollment and engagement efforts." startOffset={0.9} endOffset={0.6} />
                     </p>
                   </div>
-                  <div className="grid grid-cols-2 gap-12 pt-12 border-t border-white/10 mt-6">
-                     <div>
-                       <div className="text-[4.5rem] lg:text-[5.5rem] font-medium text-white leading-none mb-4 tracking-tighter">
-                          <ScrollRevealText text="100%" startOffset={0.9} endOffset={0.7} />
-                       </div>
-                       <div className="text-[12px] text-[#B7E39B] uppercase tracking-[0.2em] font-semibold">Leadership adoption</div>
-                     </div>
-                     <div>
-                       <div className="text-[4.5rem] lg:text-[5.5rem] font-medium text-white leading-none mb-4 tracking-tighter">
-                          <ScrollRevealText text="3" startOffset={0.9} endOffset={0.7} />
-                       </div>
-                       <div className="text-[12px] text-[#B7E39B] uppercase tracking-[0.2em] font-semibold">Creative platforms</div>
-                     </div>
+                  <div className="pt-12 border-t border-white/10 mt-6">
+                     <ul className="space-y-4 text-lg lg:text-xl font-light text-white">
+                       <li className="flex gap-4 items-start">
+                         <span className="text-[#B7E39B] font-medium mt-1">/</span>
+                         <ScrollRevealText text="Strong internal adoption and enthusiasm across leadership, faculty, students, and alumni" startOffset={0.9} endOffset={0.7} />
+                       </li>
+                       <li className="flex gap-4 items-start">
+                         <span className="text-[#B7E39B] font-medium mt-1">/</span>
+                         <ScrollRevealText text="Renewed sense of institutional pride and alignment" startOffset={0.9} endOffset={0.7} />
+                       </li>
+                       <li className="flex gap-4 items-start">
+                         <span className="text-[#B7E39B] font-medium mt-1">/</span>
+                         <ScrollRevealText text="Three creative platforms deployed to support distinct priorities: Brand awareness, Student enrollment, Community engagement and reputation" startOffset={0.9} endOffset={0.7} />
+                       </li>
+                       <li className="flex gap-4 items-start">
+                         <span className="text-[#B7E39B] font-medium mt-1">/</span>
+                         <ScrollRevealText text="A flexible brand system designed to sustain momentum year-round" startOffset={0.9} endOffset={0.7} />
+                       </li>
+                       <li className="flex gap-4 items-start">
+                         <span className="text-[#B7E39B] font-medium mt-1">/</span>
+                         <ScrollRevealText text="Elevated recognition among peer institutions" startOffset={0.9} endOffset={0.7} />
+                       </li>
+                       <li className="flex gap-4 items-start">
+                         <span className="text-[#B7E39B] font-medium mt-1">/</span>
+                         <ScrollRevealText text="Reinforced commitment to student success and community impact" startOffset={0.9} endOffset={0.7} />
+                       </li>
+                       <li className="flex gap-4 items-start">
+                         <span className="text-[#B7E39B] font-medium mt-1">/</span>
+                         <ScrollRevealText text="Increased confidence in the institution’s promise of transformative outcomes" startOffset={0.9} endOffset={0.7} />
+                       </li>
+                     </ul>
                   </div>
                </div>
 
@@ -232,11 +249,11 @@ export default function Home() {
                   <div className="space-y-6 text-white text-xl lg:text-[1.35rem] font-light leading-[1.6]">
                     <p>
                       <strong className="text-white font-medium">The Challenge:</strong> <br/>
-                      <ScrollRevealText text="UCLA wanted a story that wouldn't feel like another 'university video.' It needed to feel warm and personal, not institutional, while speaking to a wide audience." startOffset={0.9} endOffset={0.6} />
+                      <ScrollRevealText text="UCLA wanted a story that wouldn't feel like another 'university video.' It needed to feel warm and personal, not institutional, while speaking to a wide audience: donors, alumni, students, faculty, families, and leaders across Los Angeles and beyond. At the same time, UCLA was welcoming a new Chancellor and bringing 'UCLA Connects' to life. So, the work needed to reflect connection in a way that invited people into the story." startOffset={0.9} endOffset={0.6} />
                     </p>
                     <p>
                       <strong className="text-white font-medium">Our Approach:</strong> <br/>
-                      <ScrollRevealText text="Instead of big promises, UCLA had an opportunity to tell a true story only they could tell: research that directly changes a person's life, plus the community that makes those breakthroughs possible." startOffset={0.9} endOffset={0.6} />
+                      <ScrollRevealText text="Instead of big, general promises, UCLA had an opportunity to tell a true story only they could tell: research that directly changes a person's life, plus the community that makes those breakthroughs possible. By focusing on one real medical innovation and the people connected to it, the piece could:" startOffset={0.9} endOffset={0.6} />
                     </p>
                   </div>
                   <div className="pt-12 border-t border-white/10 mt-6">
@@ -247,13 +264,20 @@ export default function Home() {
                        </li>
                        <li className="flex gap-6 items-start">
                          <span className="text-[#B7E39B] font-medium">/</span>
-                         <ScrollRevealText text="Make complex science feel human" startOffset={0.9} endOffset={0.7} />
+                         <ScrollRevealText text="Make complex science and research feel understandable and human" startOffset={0.9} endOffset={0.7} />
                        </li>
                        <li className="flex gap-6 items-start">
                          <span className="text-[#B7E39B] font-medium">/</span>
-                         <ScrollRevealText text="Reinforce lifelong connection" startOffset={0.9} endOffset={0.7} />
+                         <ScrollRevealText text="Reinforce lifelong connection (Bruins supporting Bruins, across generations)" startOffset={0.9} endOffset={0.7} />
+                       </li>
+                       <li className="flex gap-6 items-start">
+                         <span className="text-[#B7E39B] font-medium">/</span>
+                         <ScrollRevealText text="Stand out from typical institutional storytelling" startOffset={0.9} endOffset={0.7} />
                        </li>
                      </ul>
+                     <p className="text-xl lg:text-[1.35rem] font-light text-[#B7E39B] mt-8 italic">
+                       In other words: show the values in action, rather than state them.
+                     </p>
                   </div>
                </div>
 
@@ -276,21 +300,21 @@ export default function Home() {
             <p className="text-xl lg:text-[1.5rem] text-white mb-14 font-light leading-[1.6] max-w-[600px]">
               <ScrollRevealText text="Find out if your institution's brand story reflects its full potential and is driving measurable growth." />
             </p>
-            <a href="#" className="group inline-flex items-center justify-between gap-12 border border-[#B7E39B] bg-[#B7E39B] hover:bg-transparent text-[#111] hover:text-[#B7E39B] transition-all duration-300 px-10 py-5 font-medium text-lg w-full sm:w-auto min-w-[320px]">
+            <PopupButton id="f73a9593-84f5-45cf-b1c1-d2639c2f1cb3" className="group inline-flex items-center justify-between gap-12 border border-[#B7E39B] bg-[#B7E39B] hover:bg-transparent text-[#111] hover:text-[#B7E39B] transition-all duration-300 px-10 py-5 font-medium text-lg w-full sm:w-auto min-w-[320px]">
               <span className="tracking-wide">Start Quiz</span>
               <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-            </a>
+            </PopupButton>
           </div>
           
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="w-[85vw] max-w-[550px] aspect-square border border-white/10 rounded-full flex flex-col items-center justify-center p-16 lg:p-24 text-center relative group overflow-hidden bg-transparent transition-all duration-700 hover:border-[#B7E39B]/40 hover:bg-[#B7E39B]/5 cursor-pointer">
+            <PopupButton id="f73a9593-84f5-45cf-b1c1-d2639c2f1cb3" className="w-[85vw] max-w-[550px] aspect-square border border-white/10 rounded-full flex flex-col items-center justify-center p-16 lg:p-24 text-center relative group overflow-hidden bg-transparent transition-all duration-700 hover:border-[#B7E39B]/40 hover:bg-[#B7E39B]/5 cursor-pointer">
               <h3 className="text-3xl md:text-[2.75rem] font-medium mb-6 relative z-10 text-white group-hover:text-[#B7E39B] transition-colors duration-500 tracking-tight leading-[1.1]">
-                 Is Your Brand Driving Growth?
+                 Is Your Brand Driving Measurable Enrollment Growth?
               </h3>
               <p className="text-white/40 relative z-10 text-lg lg:text-xl font-light leading-[1.6] group-hover:text-white/70 transition-colors duration-500">
                  A 3-minute executive assessment for Presidents, CMOs, and Enrollment Leaders.
               </p>
-            </div>
+            </PopupButton>
           </div>
         </div>
       </section>
