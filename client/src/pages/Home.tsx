@@ -79,7 +79,7 @@ export default function Home() {
         </div>
         <div className="pointer-events-auto hidden md:flex items-center gap-12 text-[12px] font-semibold tracking-[0.2em] uppercase mt-1">
            <a href="#work" className="hover:opacity-50 transition-opacity duration-300">Work</a>
-           <a href="#gps" className="hover:opacity-50 transition-opacity duration-300">GPS</a>
+           <a href="https://www.gravityglobal.com/services/public-sector" target="_blank" rel="noopener noreferrer" className="hover:opacity-50 transition-opacity duration-300">GPS</a>
            <a href="#assessment" className="hover:opacity-50 transition-opacity duration-300">Assessment</a>
         </div>
       </nav>
