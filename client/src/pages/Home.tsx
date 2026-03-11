@@ -134,7 +134,7 @@ export default function Home() {
         {/* Center Text */}
         <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-[1200px] mix-blend-difference text-white">
           <h1 className="text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] font-medium leading-[1] tracking-[-0.03em] mb-10 text-white">
-            <ScrollRevealText text="A Strong Institutional Brand is More Than Messaging. Does Yours Drive Enrollment?" startOffset={0.9} endOffset={0.5} />
+            <ScrollRevealText text="A Strong Institutional Brand Should Drive Enrollment Growth. Does Yours Measure Up?" startOffset={0.9} endOffset={0.5} />
           </h1>
           <p className="text-xl md:text-[1.4rem] text-white max-w-[760px] mb-16 leading-[1.6] font-light">
             <ScrollRevealText text="Start with the three-minute enrollment assessment. Identify how effectively your brand supports enrollment growth and whether your institution may qualify for a complimentary Enrollment Acceleration Workshop." startOffset={0.9} endOffset={0.6} />
