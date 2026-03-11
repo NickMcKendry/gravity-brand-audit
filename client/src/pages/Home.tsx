@@ -133,7 +133,7 @@ export default function Home() {
 
         {/* Center Text */}
         <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-[1200px] mix-blend-difference text-white">
-          <h1 className="text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] font-medium leading-[1] tracking-[-0.03em] mb-10 text-white">
+          <h1 className="text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5rem] font-medium leading-[1] tracking-[-0.03em] mb-10 text-white">
             <ScrollRevealText text="A Strong Institutional Brand Should Drive Enrollment Growth. Does Yours Measure Up?" startOffset={0.9} endOffset={0.5} />
           </h1>
           <p className="text-xl md:text-[1.4rem] text-white max-w-[760px] mb-16 leading-[1.6] font-light">
@@ -159,7 +159,7 @@ export default function Home() {
             Brand Clarity That Drives Enrollment
           </p>
           <div className="max-w-[1200px]">
-             <h2 className="text-[3rem] md:text-[4.5rem] lg:text-[5.5rem] font-medium leading-[1.05] tracking-[-0.02em] mb-10 text-white">
+             <h2 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-medium leading-[1.05] tracking-[-0.02em] mb-10 text-white">
                <ScrollRevealText text="From first awareness to active advocacy, leading institutions are designing experiences that turn students into ambassadors." />
              </h2>
              <p className="text-2xl lg:text-[1.75rem] text-white leading-[1.6] font-light max-w-[860px]">
@@ -179,7 +179,7 @@ export default function Home() {
                <div className="flex flex-col gap-10">
                   <div>
                     <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">Montgomery College</p>
-                    <h2 className="text-[3.5rem] md:text-[5rem] lg:text-[6rem] leading-[1] font-medium text-white tracking-[-0.02em]">
+                    <h2 className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] leading-[1] font-medium text-white tracking-[-0.02em]">
                       <ScrollRevealText text="Showcasing Exceptional Education & Extraordinary Outcomes" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
@@ -241,7 +241,7 @@ export default function Home() {
                <div className="flex flex-col gap-10">
                   <div>
                     <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">UCLA</p>
-                    <h2 className="text-[3.5rem] md:text-[5rem] lg:text-[6rem] leading-[1] font-medium text-white tracking-[-0.02em]">
+                    <h2 className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] leading-[1] font-medium text-white tracking-[-0.02em]">
                       <ScrollRevealText text="Research Powers Miracles at UCLA" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
@@ -293,7 +293,7 @@ export default function Home() {
       <section id="assessment" className="py-40 lg:py-56 px-6 lg:px-16 bg-[#111111] relative z-20 border-t border-white/10">
         <div className="max-w-[1500px] mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-[3rem] md:text-[4.5rem] lg:text-[5.5rem] font-medium leading-[1] tracking-[-0.02em] mb-10 text-white">
+            <h2 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-medium leading-[1] tracking-[-0.02em] mb-10 text-white">
               <ScrollRevealText text="Take the Assessment" />
             </h2>
             <p className="text-xl lg:text-[1.5rem] text-white mb-14 font-light leading-[1.6] max-w-[600px]">
@@ -307,7 +307,7 @@ export default function Home() {
           
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div onClick={() => window.open('https://form.typeform.com/to/f73a9593', '_blank')} className="w-[85vw] max-w-[550px] aspect-square border border-white/10 rounded-full flex flex-col items-center justify-center p-16 lg:p-24 text-center relative group overflow-hidden bg-transparent transition-all duration-700 hover:border-[#B7E39B]/40 hover:bg-[#B7E39B]/5 cursor-pointer">
-              <h3 className="text-3xl md:text-[2.75rem] font-medium mb-6 relative z-10 text-white group-hover:text-[#B7E39B] transition-colors duration-500 tracking-tight leading-[1.1]">
+              <h3 className="text-2xl md:text-[2.25rem] font-medium mb-6 relative z-10 text-white group-hover:text-[#B7E39B] transition-colors duration-500 tracking-tight leading-[1.1]">
                  Is Your Brand Driving Measurable Enrollment Growth?
               </h3>
               <p className="text-white/40 relative z-10 text-lg lg:text-xl font-light leading-[1.6] group-hover:text-white/70 transition-colors duration-500">
@@ -321,7 +321,7 @@ export default function Home() {
       {/* Brand Audit Banner */}
       <section id="audit" className="py-40 lg:py-56 px-6 lg:px-16 bg-[#B7E39B] text-[#111111] text-center">
         <div className="max-w-[1400px] mx-auto flex flex-col items-center">
-          <h2 className="text-[3.5rem] md:text-[5.5rem] lg:text-[7rem] font-medium leading-[0.95] tracking-[-0.03em] mb-12">
+          <h2 className="text-[2.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-medium leading-[0.95] tracking-[-0.03em] mb-12">
             Request Enrollment <br className="hidden md:block"/> Workshop
           </h2>
           <p className="text-xl lg:text-[1.75rem] opacity-80 mb-16 font-medium leading-[1.5] max-w-[1000px] mx-auto">
