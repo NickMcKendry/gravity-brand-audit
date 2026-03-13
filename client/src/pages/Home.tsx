@@ -163,13 +163,13 @@ export default function Home() {
       <section className="py-12 border-t border-b border-white/10 bg-[#111111] relative z-20">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-16 overflow-hidden">
           <p className="text-center text-white/40 text-[11px] font-semibold tracking-[0.25em] uppercase mb-10">Trusted by Leading Institutions</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-80">
-            <img src="/assets/northwestern-logo-new.png" alt="Northwestern University" className="h-10 md:h-12 w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/ucla-logo.png" alt="UCLA" className="h-10 md:h-12 w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/washington-logo.png" alt="University of Washington" className="h-10 md:h-12 w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/houston-logo.png" alt="University of Houston" className="h-12 md:h-16 w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/montgomery-logo.png" alt="Montgomery College" className="h-10 md:h-12 w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/incommon-logo.png" alt="InCommon" className="h-10 md:h-12 w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
+          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-20 opacity-80">
+            <img src="/assets/northwestern-logo-new.png" alt="Northwestern University" className="h-[2.5rem] md:h-[3.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/ucla-logo.png" alt="UCLA" className="h-[2rem] md:h-[2.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/washington-logo.png" alt="University of Washington" className="h-[2rem] md:h-[2.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/houston-logo.png" alt="University of Houston" className="h-[2rem] md:h-[2.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/montgomery-logo.png" alt="Montgomery College" className="h-[2rem] md:h-[2.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/incommon-logo.png" alt="InCommon" className="h-[2.5rem] md:h-[3rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
           </div>
         </div>
       </section>
