@@ -51,6 +51,7 @@ const ScrollRevealText = ({ text, className = "", startOffset = 0.85, endOffset 
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -140,14 +141,20 @@ export default function Home() {
             <ScrollRevealText text="Start with the three-minute enrollment assessment. Identify how effectively your brand supports enrollment growth and whether your institution may qualify for a complimentary Enrollment Acceleration Workshop." startOffset={0.9} endOffset={0.6} />
           </p>
           <div className="flex flex-col sm:flex-row gap-6 items-center justify-center w-full">
-            <a href="#assessment" className="group flex items-center justify-between gap-12 border border-[#B7E39B] bg-transparent hover:bg-[#B7E39B] text-[#B7E39B] hover:text-[#111] transition-all duration-300 px-10 py-5 text-lg font-medium w-full sm:w-auto min-w-[300px]">
+            <button 
+              onClick={() => window.open('https://form.typeform.com/to/f73a9593', '_blank')}
+              className="group flex items-center justify-between gap-12 border border-[#B7E39B] bg-transparent hover:bg-[#B7E39B] text-[#B7E39B] hover:text-[#111] transition-all duration-300 px-10 py-5 text-lg font-medium w-full sm:w-auto min-w-[300px]"
+            >
               <span className="tracking-wide">Take the Assessment</span>
               <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-            </a>
-            <a href="#audit" className="group flex items-center justify-between gap-12 border border-white/30 bg-transparent hover:border-white hover:bg-white text-white hover:text-[#111] transition-all duration-300 px-10 py-5 text-lg font-medium w-full sm:w-auto min-w-[300px]">
+            </button>
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="group flex items-center justify-between gap-12 border border-white/30 bg-transparent hover:border-white hover:bg-white text-white hover:text-[#111] transition-all duration-300 px-10 py-5 text-lg font-medium w-full sm:w-auto min-w-[300px]"
+            >
               <span className="tracking-wide">Request Enrollment Workshop</span>
               <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -327,12 +334,40 @@ export default function Home() {
           <p className="text-xl lg:text-[1.75rem] opacity-80 mb-16 font-medium leading-[1.5] max-w-[1000px] mx-auto">
             One institution will receive a complimentary 1:1 Enrollment Acceleration Workshop — a private working session with Gravity experts focused on identifying enrollment friction and mapping growth opportunities.
           </p>
-          <a href="#" className="group inline-flex items-center justify-between gap-12 border border-[#111111] bg-transparent hover:bg-[#111111] text-[#111111] hover:text-[#B7E39B] transition-all duration-300 px-12 py-6 font-medium text-xl w-full sm:w-auto min-w-[340px]">
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="group inline-flex items-center justify-between gap-12 border border-[#111111] bg-transparent hover:bg-[#111111] text-[#111111] hover:text-[#B7E39B] transition-all duration-300 px-12 py-6 font-medium text-xl w-full sm:w-auto min-w-[340px]"
+          >
             <span className="tracking-wide">Request Workshop</span>
             <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-          </a>
+          </button>
         </div>
       </section>
+
+      {/* HubSpot Form Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity">
+          <div className="relative w-full max-w-[800px] h-[85vh] max-h-[800px] bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col animate-in fade-in zoom-in-95 duration-200">
+            <button 
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
+              aria-label="Close modal"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <div className="w-full h-full pt-16 pb-4 px-4 bg-white">
+              <iframe 
+                src="https://share.hsforms.com/29zqVk4T1Rc-xwdJjnC8csw3gji" 
+                className="w-full h-full border-none rounded-lg"
+                title="Request Enrollment Workshop Form"
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="py-24 px-6 lg:px-16 bg-[#111111] border-t border-white/10">
