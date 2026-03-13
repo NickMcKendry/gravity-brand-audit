@@ -164,7 +164,7 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-16 overflow-hidden">
           <p className="text-center text-white/40 text-[11px] font-semibold tracking-[0.25em] uppercase mb-10">Trusted by Leading Institutions</p>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-80">
-            <img src="/assets/northwestern-logo.png" alt="Northwestern University" className="h-10 md:h-12 w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/northwestern-logo-new.png" alt="Northwestern University" className="h-10 md:h-12 w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
             <img src="/assets/ucla-logo.png" alt="UCLA" className="h-10 md:h-12 w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
             <img src="/assets/washington-logo.png" alt="University of Washington" className="h-10 md:h-12 w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
             <img src="/assets/houston-logo.png" alt="University of Houston" className="h-12 md:h-16 w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
