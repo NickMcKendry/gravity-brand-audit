@@ -98,7 +98,7 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 max-w-[1400px] mx-auto w-full">
            <div className="max-w-[900px]">
-             <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.5rem] font-medium leading-[1.05] tracking-[-0.03em] mb-8 text-white drop-shadow-lg">
+             <h1 className="text-[2.25rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.5rem] font-medium leading-[1.05] tracking-[-0.03em] mb-8 text-white drop-shadow-lg">
                A Strong Institutional Brand Should Drive Enrollment Growth. <br/>
                <span className="text-[#B7E39B]">Does Yours Measure Up?</span>
              </h1>
@@ -151,7 +151,7 @@ export default function Home() {
             Brand Clarity That Drives Enrollment
           </p>
           <div className="max-w-[1200px]">
-             <h2 className="text-[2rem] md:text-[2.75rem] lg:text-[3.5rem] font-medium leading-[1.05] tracking-[-0.02em] mb-10 text-white">
+             <h2 className="text-[2.25rem] md:text-[2.75rem] lg:text-[3.5rem] font-medium leading-[1.05] tracking-[-0.02em] mb-10 text-white">
                <ScrollRevealText text="From first awareness to active advocacy, leading institutions are designing experiences that turn students into ambassadors." />
              </h2>
              <p className="text-lg lg:text-[1.5rem] text-white leading-[1.6] font-light max-w-[860px]">
@@ -165,13 +165,13 @@ export default function Home() {
       <section className="py-24 lg:py-32 px-6 lg:px-16 bg-[#111111] relative z-20 border-t border-white/10">
          
          {/* Slide 1: Montgomery College */}
-         <div className="sticky top-0 min-h-screen w-full flex items-center bg-[#111111] pt-32 pb-32">
-            <div className="max-w-[1500px] mx-auto w-full grid lg:grid-cols-[1fr_1.4fr] gap-16 lg:gap-32 items-center">
+         <div className="sticky top-0 min-h-screen w-full flex items-center bg-[#111111] pt-24 pb-24 lg:pt-32 lg:pb-32">
+            <div className="max-w-[1500px] mx-auto w-full grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-32 items-center">
                
-               <div className="flex flex-col gap-10">
+               <div className="flex flex-col gap-8 lg:gap-10">
                   <div>
                     <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">Montgomery College</p>
-                    <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] leading-[1] font-medium text-white tracking-[-0.02em]">
+                    <h2 className="text-[2.25rem] md:text-[3rem] lg:text-[4rem] leading-[1] font-medium text-white tracking-[-0.02em]">
                       <ScrollRevealText text="Showcasing Exceptional Education & Extraordinary Outcomes" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
@@ -237,13 +237,13 @@ export default function Home() {
          </div>
 
          {/* Slide 2: California University */}
-         <div className="sticky top-0 min-h-screen w-full flex items-center px-6 lg:px-16 bg-[#111111] pt-32 pb-32 border-t border-white/10 shadow-[0_-30px_60px_rgba(0,0,0,0.8)]">
-            <div className="max-w-[1500px] mx-auto w-full grid lg:grid-cols-[1fr_1.4fr] gap-16 lg:gap-32 items-center">
+         <div className="sticky top-0 min-h-screen w-full flex items-center px-6 lg:px-16 bg-[#111111] pt-24 pb-24 lg:pt-32 lg:pb-32 border-t border-white/10 shadow-[0_-30px_60px_rgba(0,0,0,0.8)]">
+            <div className="max-w-[1500px] mx-auto w-full grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-32 items-center">
                
-               <div className="flex flex-col gap-10">
+               <div className="flex flex-col gap-8 lg:gap-10">
                   <div>
                     <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">California University</p>
-                    <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] leading-[1] font-medium text-white tracking-[-0.02em]">
+                    <h2 className="text-[2.25rem] md:text-[3rem] lg:text-[4rem] leading-[1] font-medium text-white tracking-[-0.02em]">
                       <ScrollRevealText text="Research Powers Miracles at California University" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
@@ -292,10 +292,10 @@ export default function Home() {
       </section>
 
       {/* Assessment CTA */}
-      <section id="assessment" className="py-40 lg:py-56 px-6 lg:px-16 bg-[#111111] relative z-20 border-t border-white/10">
-        <div className="max-w-[1500px] mx-auto grid lg:grid-cols-2 gap-20 items-center">
+      <section id="assessment" className="py-24 lg:py-56 px-6 lg:px-16 bg-[#111111] relative z-20 border-t border-white/10">
+        <div className="max-w-[1500px] mx-auto grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] font-medium leading-[1] tracking-[-0.02em] mb-10 text-white">
+            <h2 className="text-[2.25rem] md:text-[3rem] lg:text-[4rem] font-medium leading-[1.05] tracking-[-0.02em] mb-8 lg:mb-10 text-white">
               <ScrollRevealText text="Take the Assessment" />
             </h2>
             <p className="text-lg lg:text-[1.25rem] text-white mb-14 font-light leading-[1.6] max-w-[600px]">
@@ -321,9 +321,9 @@ export default function Home() {
       </section>
 
       {/* Brand Audit Banner */}
-      <section id="audit" className="py-40 lg:py-56 px-6 lg:px-16 bg-[#B7E39B] text-[#111111] text-center">
+      <section id="audit" className="py-24 lg:py-56 px-6 lg:px-16 bg-[#B7E39B] text-[#111111] text-center">
         <div className="max-w-[1400px] mx-auto flex flex-col items-center">
-          <h2 className="text-[2rem] md:text-[3.5rem] lg:text-[4.5rem] font-medium leading-[0.95] tracking-[-0.03em] mb-12">
+          <h2 className="text-[2.25rem] md:text-[3.5rem] lg:text-[4.5rem] font-medium leading-[0.95] tracking-[-0.03em] mb-8 lg:mb-12">
             Request Enrollment <br className="hidden md:block"/> Workshop
           </h2>
           <p className="text-lg lg:text-[1.5rem] opacity-80 mb-16 font-medium leading-[1.5] max-w-[1000px] mx-auto">
