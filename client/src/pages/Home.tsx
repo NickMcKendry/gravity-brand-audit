@@ -94,7 +94,7 @@ export default function Home() {
              className="absolute top-[8%] left-[2%] w-[22vw] max-w-[320px] aspect-[4/3] opacity-[0.35] grayscale transition-transform duration-75 ease-out"
              style={{ transform: `translateY(${scrollY * 0.1}px)` }}
            >
-              <img src="/assets/hero-bg.jpg" className="w-full h-full object-cover" alt=""/>
+              <img src="/assets/campus-students.jpg" className="w-full h-full object-cover" alt=""/>
            </div>
            
            {/* Top Right */}
@@ -102,7 +102,7 @@ export default function Home() {
              className="absolute top-[12%] right-[2%] w-[18vw] max-w-[260px] aspect-[3/2] opacity-[0.25] grayscale transition-transform duration-75 ease-out"
              style={{ transform: `translateY(${scrollY * 0.18}px)` }}
            >
-              <img src="/assets/ucla.jpg" className="w-full h-full object-cover" alt=""/>
+              <img src="/assets/montgomery-college.jpg" className="w-full h-full object-cover" alt=""/>
            </div>
            
            {/* Bottom Left Group */}
@@ -114,7 +114,7 @@ export default function Home() {
                  <img src="/assets/montgomery-college.jpg" className="w-full h-full object-cover" alt=""/>
               </div>
               <div className="w-[20vw] max-w-[280px] aspect-[3/4] opacity-[0.35] grayscale">
-                 <img src="/assets/hero-bg.jpg" className="w-full h-full object-cover" alt=""/>
+                 <img src="/assets/california-university.jpg" className="w-full h-full object-cover" alt=""/>
               </div>
            </div>
            
@@ -124,10 +124,10 @@ export default function Home() {
              style={{ transform: `translateY(-${scrollY * 0.15}px)` }}
            >
               <div className="w-[18vw] max-w-[260px] aspect-[4/3] opacity-[0.35] grayscale">
-                 <img src="/assets/ucla.jpg" className="w-full h-full object-cover" alt=""/>
+                 <img src="/assets/california-university.jpg" className="w-full h-full object-cover" alt=""/>
               </div>
               <div className="w-[14vw] max-w-[190px] aspect-[3/4] mt-24 opacity-[0.45] grayscale">
-                 <img src="/assets/montgomery-college.jpg" className="w-full h-full object-cover" alt=""/>
+                 <img src="/assets/campus-students.jpg" className="w-full h-full object-cover" alt=""/>
               </div>
            </div>
         </div>
@@ -142,14 +142,18 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 items-center justify-center w-full">
             <button 
-              onClick={() => window.open('https://form.typeform.com/to/f73a9593', '_blank')}
+              onClick={() => {
+                document.getElementById('assessment')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="group flex items-center justify-between gap-12 border border-[#B7E39B] bg-transparent hover:bg-[#B7E39B] text-[#B7E39B] hover:text-[#111] transition-all duration-300 px-10 py-5 text-lg font-medium w-full sm:w-auto min-w-[300px]"
             >
               <span className="tracking-wide">Take the Assessment</span>
               <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
             </button>
             <button 
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => {
+                document.getElementById('audit')?.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="group flex items-center justify-between gap-12 border border-white/30 bg-transparent hover:border-white hover:bg-white text-white hover:text-[#111] transition-all duration-300 px-10 py-5 text-lg font-medium w-full sm:w-auto min-w-[300px]"
             >
               <span className="tracking-wide">Request Enrollment Workshop</span>
@@ -164,12 +168,11 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-16 overflow-hidden">
           <p className="text-center text-white/40 text-[11px] font-semibold tracking-[0.25em] uppercase mb-10">Trusted by Leading Institutions</p>
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-20 opacity-80">
-            <img src="/assets/northwestern-logo-new.png" alt="Northwestern University" className="h-[2.5rem] md:h-[3.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/ucla-logo.png" alt="UCLA" className="h-[2rem] md:h-[2.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/washington-logo.png" alt="University of Washington" className="h-[6rem] md:h-[8rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
             <img src="/assets/houston-logo.png" alt="University of Houston" className="h-[5rem] md:h-[6.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/montgomery-logo.png" alt="Montgomery College" className="h-[2rem] md:h-[2.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
             <img src="/assets/incommon-logo.png" alt="InCommon" className="h-[2.5rem] md:h-[3rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/montgomery-logo.png" alt="Montgomery College" className="h-[2rem] md:h-[2.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/northwestern-logo-new.png" alt="Northwestern University" className="h-[2.5rem] md:h-[3.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/washington-logo.png" alt="University of Washington" className="h-[6rem] md:h-[8rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
           </div>
         </div>
       </section>
@@ -185,7 +188,7 @@ export default function Home() {
                <ScrollRevealText text="From first awareness to active advocacy, leading institutions are designing experiences that turn students into ambassadors." />
              </h2>
              <p className="text-2xl lg:text-[1.75rem] text-white leading-[1.6] font-light max-w-[860px]">
-               <ScrollRevealText text="See how institutions like Montgomery College and UCLA align brand strategy with the student journey to increase engagement, enrollment, and long-term student advocacy." />
+               <ScrollRevealText text="See how institutions like Montgomery College and California University align brand strategy with the student journey to increase engagement, enrollment, and long-term student advocacy." />
              </p>
           </div>
         </div>
@@ -256,32 +259,32 @@ export default function Home() {
             </div>
          </div>
 
-         {/* Slide 2: UCLA */}
+         {/* Slide 2: California University */}
          <div className="sticky top-0 min-h-screen w-full flex items-center px-6 lg:px-16 bg-[#111111] pt-32 pb-32 border-t border-white/10 shadow-[0_-30px_60px_rgba(0,0,0,0.8)]">
             <div className="max-w-[1500px] mx-auto w-full grid lg:grid-cols-[1fr_1.4fr] gap-16 lg:gap-32 items-center">
                
                <div className="flex flex-col gap-10">
                   <div>
-                    <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">UCLA</p>
+                    <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">California University</p>
                     <h2 className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] leading-[1] font-medium text-white tracking-[-0.02em]">
-                      <ScrollRevealText text="Research Powers Miracles at UCLA" startOffset={0.9} endOffset={0.5} />
+                      <ScrollRevealText text="Research Powers Miracles at California University" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
                   <div className="space-y-6 text-white text-xl lg:text-[1.35rem] font-light leading-[1.6]">
                     <p>
                       <strong className="text-white font-medium">The Challenge:</strong> <br/>
-                      <ScrollRevealText text="UCLA wanted a story that wouldn't feel like another 'university video.' It needed to feel warm and personal, not institutional, while speaking to a wide audience: donors, alumni, students, faculty, families, and leaders across Los Angeles and beyond. At the same time, UCLA was welcoming a new Chancellor and bringing 'UCLA Connects' to life. So, the work needed to reflect connection in a way that invited people into the story." startOffset={0.9} endOffset={0.6} />
+                      <ScrollRevealText text="California University wanted a story that wouldn't feel like another 'university video.' It needed to feel warm and personal, not institutional, while speaking to a wide audience: donors, alumni, students, faculty, families, and leaders across the region and beyond. At the same time, the university was welcoming a new Chancellor and bringing a new connection initiative to life. So, the work needed to reflect connection in a way that invited people into the story." startOffset={0.9} endOffset={0.6} />
                     </p>
                     <p>
                       <strong className="text-white font-medium">Our Approach:</strong> <br/>
-                      <ScrollRevealText text="Instead of big, general promises, UCLA had an opportunity to tell a true story only they could tell: research that directly changes a person's life, plus the community that makes those breakthroughs possible. By focusing on one real medical innovation and the people connected to it, the piece could:" startOffset={0.9} endOffset={0.6} />
+                      <ScrollRevealText text="Instead of big, general promises, California University had an opportunity to tell a true story only they could tell: research that directly changes a person's life, plus the community that makes those breakthroughs possible. By focusing on one real medical innovation and the people connected to it, the piece could:" startOffset={0.9} endOffset={0.6} />
                     </p>
                   </div>
                   <div className="pt-12 border-t border-white/10 mt-6">
                      <ul className="space-y-6 text-xl lg:text-[1.35rem] font-light text-white">
                        <li className="flex gap-6 items-start">
                          <span className="text-[#B7E39B] font-medium">/</span>
-                         <ScrollRevealText text="Show UCLA's impact beyond campus" startOffset={0.9} endOffset={0.7} />
+                         <ScrollRevealText text="Show the university's impact beyond campus" startOffset={0.9} endOffset={0.7} />
                        </li>
                        <li className="flex gap-6 items-start">
                          <span className="text-[#B7E39B] font-medium">/</span>
@@ -289,7 +292,7 @@ export default function Home() {
                        </li>
                        <li className="flex gap-6 items-start">
                          <span className="text-[#B7E39B] font-medium">/</span>
-                         <ScrollRevealText text="Reinforce lifelong connection (Bruins supporting Bruins, across generations)" startOffset={0.9} endOffset={0.7} />
+                         <ScrollRevealText text="Reinforce lifelong connection (Alumni supporting alumni, across generations)" startOffset={0.9} endOffset={0.7} />
                        </li>
                        <li className="flex gap-6 items-start">
                          <span className="text-[#B7E39B] font-medium">/</span>
@@ -303,7 +306,7 @@ export default function Home() {
                </div>
 
                <div className="w-full aspect-[4/3] lg:aspect-[3/4] max-h-[85vh] relative overflow-hidden bg-[#1a1a1a]">
-                  <img src="/assets/ucla.jpg" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="UCLA" />
+                  <img src="/assets/california-university.jpg" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="California University" />
                </div>
 
             </div>
@@ -321,14 +324,14 @@ export default function Home() {
             <p className="text-xl lg:text-[1.5rem] text-white mb-14 font-light leading-[1.6] max-w-[600px]">
               <ScrollRevealText text="A short executive assessment designed to reveal how well your brand strategy supports enrollment performance." />
             </p>
-            <button onClick={() => window.open('https://form.typeform.com/to/f73a9593', '_blank')} className="group inline-flex items-center justify-between gap-12 border border-[#B7E39B] bg-[#B7E39B] hover:bg-transparent text-[#111] hover:text-[#B7E39B] transition-all duration-300 px-10 py-5 font-medium text-lg w-full sm:w-auto min-w-[320px]">
+            <button onClick={() => setIsModalOpen(true)} className="group inline-flex items-center justify-between gap-12 border border-[#B7E39B] bg-[#B7E39B] hover:bg-transparent text-[#111] hover:text-[#B7E39B] transition-all duration-300 px-10 py-5 font-medium text-lg w-full sm:w-auto min-w-[320px]">
               <span className="tracking-wide">Start Assessment</span>
               <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
             </button>
           </div>
           
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div onClick={() => window.open('https://form.typeform.com/to/f73a9593', '_blank')} className="w-[85vw] max-w-[550px] aspect-square border border-white/10 rounded-full flex flex-col items-center justify-center p-16 lg:p-24 text-center relative group overflow-hidden bg-transparent transition-all duration-700 hover:border-[#B7E39B]/40 hover:bg-[#B7E39B]/5 cursor-pointer">
+            <div onClick={() => setIsModalOpen(true)} className="w-[85vw] max-w-[550px] aspect-square border border-white/10 rounded-full flex flex-col items-center justify-center p-16 lg:p-24 text-center relative group overflow-hidden bg-transparent transition-all duration-700 hover:border-[#B7E39B]/40 hover:bg-[#B7E39B]/5 cursor-pointer">
               <h3 className="text-2xl md:text-[2.25rem] font-medium mb-6 relative z-10 text-white group-hover:text-[#B7E39B] transition-colors duration-500 tracking-tight leading-[1.1]">
                  Is Your Brand Driving Measurable Enrollment Growth?
               </h3>
@@ -350,7 +353,7 @@ export default function Home() {
             One institution will receive a complimentary 1:1 Enrollment Acceleration Workshop — a private working session with Gravity experts focused on identifying enrollment friction and mapping growth opportunities.
           </p>
           <button 
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => window.open('https://form.typeform.com/to/f73a9593', '_blank')}
             className="group inline-flex items-center justify-between gap-12 border border-[#111111] bg-transparent hover:bg-[#111111] text-[#111111] hover:text-[#B7E39B] transition-all duration-300 px-12 py-6 font-medium text-xl w-full sm:w-auto min-w-[340px]"
           >
             <span className="tracking-wide">Request Workshop</span>
@@ -377,7 +380,7 @@ export default function Home() {
               <iframe 
                 src="https://share.hsforms.com/29zqVk4T1Rc-xwdJjnC8csw3gji" 
                 className="w-full h-full border-none rounded-lg"
-                title="Request Enrollment Workshop Form"
+                title="Enrollment Assessment Form"
               />
             </div>
           </div>
