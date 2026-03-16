@@ -85,81 +85,51 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen w-full flex items-center justify-center bg-[#111111] pt-32 pb-32">
+      <section className="relative min-h-screen w-full flex flex-col justify-center bg-[#111111] pt-32 pb-32 px-6 lg:px-16 overflow-hidden">
         
-        {/* Floating Images Parallax */}
-        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-           {/* Top Left */}
-           <div 
-             className="absolute top-[8%] left-[2%] w-[22vw] max-w-[320px] aspect-[4/3] opacity-[0.35] grayscale transition-transform duration-75 ease-out"
-             style={{ transform: `translateY(${scrollY * 0.1}px)` }}
-           >
-              <img src="/assets/campus-students.jpg" className="w-full h-full object-cover" alt=""/>
-           </div>
+        {/* Subtle Background Elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+           <div className="absolute top-[-20%] right-[-10%] w-[50%] aspect-square rounded-full bg-[#B7E39B]/5 blur-[120px]"></div>
+           <div className="absolute bottom-[-10%] left-[-10%] w-[40%] aspect-square rounded-full bg-[#B7E39B]/5 blur-[100px]"></div>
            
-           {/* Top Right */}
-           <div 
-             className="absolute top-[12%] right-[2%] w-[18vw] max-w-[260px] aspect-[3/2] opacity-[0.25] grayscale transition-transform duration-75 ease-out"
-             style={{ transform: `translateY(${scrollY * 0.18}px)` }}
-           >
-              <img src="/assets/montgomery-college.jpg" className="w-full h-full object-cover" alt=""/>
-           </div>
-           
-           {/* Bottom Left Group */}
-           <div 
-             className="absolute bottom-[2%] left-[-1%] flex gap-[2vw] items-end transition-transform duration-75 ease-out"
-             style={{ transform: `translateY(-${scrollY * 0.1}px)` }}
-           >
-              <div className="w-[18vw] max-w-[240px] aspect-[4/3] opacity-[0.45] grayscale">
-                 <img src="/assets/montgomery-college.jpg" className="w-full h-full object-cover" alt=""/>
-              </div>
-              <div className="w-[20vw] max-w-[280px] aspect-[3/4] opacity-[0.35] grayscale">
-                 <img src="/assets/california-university.jpg" className="w-full h-full object-cover" alt=""/>
-              </div>
-           </div>
-           
-           {/* Bottom Right Group */}
-           <div 
-             className="absolute bottom-[8%] right-[1%] flex gap-[2vw] items-start transition-transform duration-75 ease-out"
-             style={{ transform: `translateY(-${scrollY * 0.15}px)` }}
-           >
-              <div className="w-[18vw] max-w-[260px] aspect-[4/3] opacity-[0.35] grayscale">
-                 <img src="/assets/california-university.jpg" className="w-full h-full object-cover" alt=""/>
-              </div>
-              <div className="w-[14vw] max-w-[190px] aspect-[3/4] mt-24 opacity-[0.45] grayscale">
-                 <img src="/assets/campus-students.jpg" className="w-full h-full object-cover" alt=""/>
-              </div>
-           </div>
+           {/* Subtle Grid */}
+           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
         </div>
 
-        {/* Center Text */}
-        <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-[1200px] mix-blend-difference text-white">
-          <h1 className="text-[2.5rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5rem] font-medium leading-[1] tracking-[-0.03em] mb-10 text-white">
-            <ScrollRevealText text="A Strong Institutional Brand Should Drive Enrollment Growth. Does Yours Measure Up?" startOffset={0.9} endOffset={0.5} />
-          </h1>
-          <p className="text-xl md:text-[1.4rem] text-white max-w-[760px] mb-16 leading-[1.6] font-light">
-            <ScrollRevealText text="Start with the three-minute enrollment assessment. Identify how effectively your brand supports enrollment growth and whether your institution may qualify for a complimentary Enrollment Acceleration Workshop." startOffset={0.9} endOffset={0.6} />
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 items-center justify-center w-full">
-            <button 
-              onClick={() => {
-                document.getElementById('assessment')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="group flex items-center justify-between gap-12 border border-[#B7E39B] bg-transparent hover:bg-[#B7E39B] text-[#B7E39B] hover:text-[#111] transition-all duration-300 px-10 py-5 text-lg font-medium w-full sm:w-auto min-w-[300px]"
-            >
-              <span className="tracking-wide">Take the Assessment</span>
-              <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-            </button>
-            <button 
-              onClick={() => {
-                document.getElementById('audit')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="group flex items-center justify-between gap-12 border border-white/30 bg-transparent hover:border-white hover:bg-white text-white hover:text-[#111] transition-all duration-300 px-10 py-5 text-lg font-medium w-full sm:w-auto min-w-[300px]"
-            >
-              <span className="tracking-wide">Request Enrollment Workshop</span>
-              <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-            </button>
-          </div>
+        {/* Content */}
+        <div className="relative z-10 max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+           <div className="w-full lg:w-[55%]">
+             <h1 className="text-[3rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5.5rem] font-medium leading-[1.05] tracking-[-0.03em] mb-8 text-white">
+               A Strong Institutional Brand Should Drive Enrollment Growth. <br/>
+               <span className="text-white/40">Does Yours Measure Up?</span>
+             </h1>
+           </div>
+           
+           <div className="w-full lg:w-[45%] flex flex-col gap-10 lg:pt-10">
+             <p className="text-xl md:text-[1.35rem] text-white/80 leading-[1.6] font-light">
+               Start with the three-minute enrollment assessment. Identify how effectively your brand supports enrollment growth and whether your institution may qualify for a complimentary Enrollment Acceleration Workshop.
+             </p>
+             <div className="flex flex-col gap-4 w-full">
+               <button 
+                 onClick={() => {
+                   document.getElementById('assessment')?.scrollIntoView({ behavior: 'smooth' });
+                 }}
+                 className="group flex items-center justify-between gap-8 bg-[#B7E39B] text-[#111] hover:bg-white transition-all duration-300 px-8 py-5 text-lg font-medium w-full"
+               >
+                 <span className="tracking-wide">Take the Assessment</span>
+                 <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+               </button>
+               <button 
+                 onClick={() => {
+                   document.getElementById('audit')?.scrollIntoView({ behavior: 'smooth' });
+                 }}
+                 className="group flex items-center justify-between gap-8 border border-white/20 bg-transparent hover:border-white text-white transition-all duration-300 px-8 py-5 text-lg font-medium w-full"
+               >
+                 <span className="tracking-wide">Request Enrollment Workshop</span>
+                 <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+               </button>
+             </div>
+           </div>
         </div>
       </section>
 
