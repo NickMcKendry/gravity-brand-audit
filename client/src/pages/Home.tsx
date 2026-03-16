@@ -130,15 +130,16 @@ export default function Home() {
       </section>
 
       {/* Logo Garden */}
-      <section className="py-12 border-t border-b border-white/10 bg-[#111111] relative z-20">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-16 overflow-hidden">
-          <p className="text-center text-white/40 text-[11px] font-semibold tracking-[0.25em] uppercase mb-10">Trusted by Leading Institutions</p>
-          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-20 opacity-80">
-            <img src="/assets/houston-logo.png" alt="University of Houston" className="h-[5rem] md:h-[6.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/incommon-logo.png" alt="InCommon" className="h-[2.5rem] md:h-[3rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/montgomery-logo.png" alt="Montgomery College" className="h-[2rem] md:h-[2.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/northwestern-logo-new.png" alt="Northwestern University" className="h-[2.5rem] md:h-[3.5rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/washington-logo.png" alt="University of Washington" className="h-[6rem] md:h-[8rem] w-auto brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-300 object-contain" />
+      <section className="py-24 border-t border-b border-white/10 bg-[#111111] relative z-20">
+        <div className="max-w-[1100px] mx-auto px-6 lg:px-8 overflow-hidden flex flex-col items-center">
+          <p className="text-center text-white/50 text-[11px] font-semibold tracking-[0.25em] uppercase mb-16">Trusted by Leading Institutions</p>
+          
+          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-12 md:gap-x-16 lg:gap-x-20 opacity-70">
+            <img src="/assets/houston-logo.png" alt="University of Houston" className="h-[28px] md:h-[34px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/incommon-logo.png" alt="InCommon" className="h-[36px] md:h-[46px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/montgomery-logo.png" alt="Montgomery College" className="h-[28px] md:h-[34px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/northwestern-logo-new.png" alt="Northwestern University" className="h-[46px] md:h-[58px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/washington-logo.png" alt="University of Washington" className="h-[52px] md:h-[65px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain w-full md:w-auto mt-4 md:mt-0" />
           </div>
         </div>
       </section>
