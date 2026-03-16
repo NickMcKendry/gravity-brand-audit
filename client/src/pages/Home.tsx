@@ -85,36 +85,32 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen w-full flex flex-col justify-center bg-[#111111] pt-32 pb-32 px-6 lg:px-16 overflow-hidden">
+      <section className="relative min-h-[95vh] w-full flex flex-col justify-center bg-[#111111] pt-32 pb-32 px-6 lg:px-16 overflow-hidden">
         
-        {/* Subtle Background Elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-           <div className="absolute top-[-20%] right-[-10%] w-[50%] aspect-square rounded-full bg-[#B7E39B]/5 blur-[120px]"></div>
-           <div className="absolute bottom-[-10%] left-[-10%] w-[40%] aspect-square rounded-full bg-[#B7E39B]/5 blur-[100px]"></div>
-           
-           {/* Subtle Grid */}
-           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+           <img src="/assets/hero-bg.jpg" className="w-full h-full object-cover opacity-40 mix-blend-luminosity" alt="" />
+           <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/80 to-transparent"></div>
+           <div className="absolute inset-0 bg-gradient-to-r from-[#111111] via-[#111111]/60 to-transparent"></div>
+           <div className="absolute top-[-20%] right-[-10%] w-[50%] aspect-square rounded-full bg-[#B7E39B]/10 blur-[120px]"></div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
-           <div className="w-full lg:w-[55%]">
-             <h1 className="text-[3rem] sm:text-[4rem] md:text-[4.5rem] lg:text-[5.5rem] font-medium leading-[1.05] tracking-[-0.03em] mb-8 text-white">
+        <div className="relative z-10 max-w-[1400px] mx-auto w-full">
+           <div className="max-w-[900px]">
+             <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.5rem] font-medium leading-[1.05] tracking-[-0.03em] mb-8 text-white drop-shadow-lg">
                A Strong Institutional Brand Should Drive Enrollment Growth. <br/>
-               <span className="text-white/40">Does Yours Measure Up?</span>
+               <span className="text-[#B7E39B]">Does Yours Measure Up?</span>
              </h1>
-           </div>
-           
-           <div className="w-full lg:w-[45%] flex flex-col gap-10 lg:pt-10">
-             <p className="text-xl md:text-[1.35rem] text-white/80 leading-[1.6] font-light">
+             <p className="text-lg md:text-[1.25rem] text-white/90 leading-[1.6] font-light max-w-[700px] mb-12 drop-shadow">
                Start with the three-minute enrollment assessment. Identify how effectively your brand supports enrollment growth and whether your institution may qualify for a complimentary Enrollment Acceleration Workshop.
              </p>
-             <div className="flex flex-col gap-4 w-full">
+             <div className="flex flex-col sm:flex-row gap-6">
                <button 
                  onClick={() => {
                    document.getElementById('assessment')?.scrollIntoView({ behavior: 'smooth' });
                  }}
-                 className="group flex items-center justify-between gap-8 bg-[#B7E39B] text-[#111] hover:bg-white transition-all duration-300 px-8 py-5 text-lg font-medium w-full"
+                 className="group flex items-center justify-between gap-8 bg-[#B7E39B] text-[#111] hover:bg-white transition-all duration-300 px-8 py-4 text-base font-medium min-w-[280px]"
                >
                  <span className="tracking-wide">Take the Assessment</span>
                  <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
@@ -123,9 +119,9 @@ export default function Home() {
                  onClick={() => {
                    document.getElementById('audit')?.scrollIntoView({ behavior: 'smooth' });
                  }}
-                 className="group flex items-center justify-between gap-8 border border-white/20 bg-transparent hover:border-white text-white transition-all duration-300 px-8 py-5 text-lg font-medium w-full"
+                 className="group flex items-center justify-between gap-8 border border-white/30 bg-black/20 backdrop-blur-sm hover:border-white text-white transition-all duration-300 px-8 py-4 text-base font-medium min-w-[280px]"
                >
-                 <span className="tracking-wide">Request Enrollment Workshop</span>
+                 <span className="tracking-wide">Request Workshop</span>
                  <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                </button>
              </div>
@@ -154,10 +150,10 @@ export default function Home() {
             Brand Clarity That Drives Enrollment
           </p>
           <div className="max-w-[1200px]">
-             <h2 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-medium leading-[1.05] tracking-[-0.02em] mb-10 text-white">
+             <h2 className="text-[2rem] md:text-[2.75rem] lg:text-[3.5rem] font-medium leading-[1.05] tracking-[-0.02em] mb-10 text-white">
                <ScrollRevealText text="From first awareness to active advocacy, leading institutions are designing experiences that turn students into ambassadors." />
              </h2>
-             <p className="text-2xl lg:text-[1.75rem] text-white leading-[1.6] font-light max-w-[860px]">
+             <p className="text-lg lg:text-[1.5rem] text-white leading-[1.6] font-light max-w-[860px]">
                <ScrollRevealText text="See how institutions like Montgomery College and California University align brand strategy with the student journey to increase engagement, enrollment, and long-term student advocacy." />
              </p>
           </div>
@@ -174,11 +170,11 @@ export default function Home() {
                <div className="flex flex-col gap-10">
                   <div>
                     <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">Montgomery College</p>
-                    <h2 className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] leading-[1] font-medium text-white tracking-[-0.02em]">
+                    <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] leading-[1] font-medium text-white tracking-[-0.02em]">
                       <ScrollRevealText text="Showcasing Exceptional Education & Extraordinary Outcomes" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
-                  <div className="space-y-6 text-white text-xl lg:text-[1.35rem] font-light leading-[1.6]">
+                  <div className="space-y-6 text-white text-lg lg:text-xl font-light leading-[1.6]">
                     <p>
                       <strong className="text-white font-medium">The Challenge:</strong> <br/>
                       <ScrollRevealText text="Montgomery College set out to reframe its story—shifting perceptions of what a community college can be. Widely recognized as Maryland’s top community college and a nationally ranked institution, the College wanted to showcase the transformative outcomes already happening on its campuses and in its community. The goal was to attract more students, deepen pride among alumni and stakeholders, and unify teams around a shared vision. Yet internal silos, inconsistent data practices, and differing perspectives on brand priorities made it challenging to present one clear, compelling story to the world." startOffset={0.9} endOffset={0.6} />
@@ -236,11 +232,11 @@ export default function Home() {
                <div className="flex flex-col gap-10">
                   <div>
                     <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">California University</p>
-                    <h2 className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] leading-[1] font-medium text-white tracking-[-0.02em]">
+                    <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] leading-[1] font-medium text-white tracking-[-0.02em]">
                       <ScrollRevealText text="Research Powers Miracles at California University" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
-                  <div className="space-y-6 text-white text-xl lg:text-[1.35rem] font-light leading-[1.6]">
+                  <div className="space-y-6 text-white text-lg lg:text-xl font-light leading-[1.6]">
                     <p>
                       <strong className="text-white font-medium">The Challenge:</strong> <br/>
                       <ScrollRevealText text="California University wanted a story that wouldn't feel like another 'university video.' It needed to feel warm and personal, not institutional, while speaking to a wide audience: donors, alumni, students, faculty, families, and leaders across the region and beyond. At the same time, the university was welcoming a new Chancellor and bringing a new connection initiative to life. So, the work needed to reflect connection in a way that invited people into the story." startOffset={0.9} endOffset={0.6} />
@@ -251,7 +247,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="pt-12 border-t border-white/10 mt-6">
-                     <ul className="space-y-6 text-xl lg:text-[1.35rem] font-light text-white">
+                     <ul className="space-y-6 text-lg lg:text-xl font-light text-white">
                        <li className="flex gap-6 items-start">
                          <span className="text-[#B7E39B] font-medium">/</span>
                          <ScrollRevealText text="Show the university's impact beyond campus" startOffset={0.9} endOffset={0.7} />
@@ -269,7 +265,7 @@ export default function Home() {
                          <ScrollRevealText text="Stand out from typical institutional storytelling" startOffset={0.9} endOffset={0.7} />
                        </li>
                      </ul>
-                     <p className="text-xl lg:text-[1.35rem] font-light text-[#B7E39B] mt-8 italic">
+                     <p className="text-lg lg:text-xl font-light text-[#B7E39B] mt-8 italic">
                        In other words: show the values in action, rather than state them.
                      </p>
                   </div>
@@ -288,10 +284,10 @@ export default function Home() {
       <section id="assessment" className="py-40 lg:py-56 px-6 lg:px-16 bg-[#111111] relative z-20 border-t border-white/10">
         <div className="max-w-[1500px] mx-auto grid lg:grid-cols-2 gap-20 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-medium leading-[1] tracking-[-0.02em] mb-10 text-white">
+            <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] font-medium leading-[1] tracking-[-0.02em] mb-10 text-white">
               <ScrollRevealText text="Take the Assessment" />
             </h2>
-            <p className="text-xl lg:text-[1.5rem] text-white mb-14 font-light leading-[1.6] max-w-[600px]">
+            <p className="text-lg lg:text-[1.25rem] text-white mb-14 font-light leading-[1.6] max-w-[600px]">
               <ScrollRevealText text="A short executive assessment designed to reveal how well your brand strategy supports enrollment performance." />
             </p>
             <button onClick={() => setIsModalOpen(true)} className="group inline-flex items-center justify-between gap-12 border border-[#B7E39B] bg-[#B7E39B] hover:bg-transparent text-[#111] hover:text-[#B7E39B] transition-all duration-300 px-10 py-5 font-medium text-lg w-full sm:w-auto min-w-[320px]">
@@ -301,11 +297,11 @@ export default function Home() {
           </div>
           
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div onClick={() => setIsModalOpen(true)} className="w-[85vw] max-w-[550px] aspect-square border border-white/10 rounded-full flex flex-col items-center justify-center p-16 lg:p-24 text-center relative group overflow-hidden bg-transparent transition-all duration-700 hover:border-[#B7E39B]/40 hover:bg-[#B7E39B]/5 cursor-pointer">
-              <h3 className="text-2xl md:text-[2.25rem] font-medium mb-6 relative z-10 text-white group-hover:text-[#B7E39B] transition-colors duration-500 tracking-tight leading-[1.1]">
+            <div onClick={() => setIsModalOpen(true)} className="w-[85vw] max-w-[450px] aspect-square border border-white/10 rounded-full flex flex-col items-center justify-center p-12 lg:p-16 text-center relative group overflow-hidden bg-transparent transition-all duration-700 hover:border-[#B7E39B]/40 hover:bg-[#B7E39B]/5 cursor-pointer">
+              <h3 className="text-xl md:text-[2rem] font-medium mb-6 relative z-10 text-white group-hover:text-[#B7E39B] transition-colors duration-500 tracking-tight leading-[1.1]">
                  Is Your Brand Driving Measurable Enrollment Growth?
               </h3>
-              <p className="text-white/40 relative z-10 text-lg lg:text-xl font-light leading-[1.6] group-hover:text-white/70 transition-colors duration-500">
+              <p className="text-white/40 relative z-10 text-base lg:text-lg font-light leading-[1.6] group-hover:text-white/70 transition-colors duration-500">
                  A 3-minute executive assessment for Presidents, CMOs, and Enrollment Leaders.
               </p>
             </div>
@@ -316,10 +312,10 @@ export default function Home() {
       {/* Brand Audit Banner */}
       <section id="audit" className="py-40 lg:py-56 px-6 lg:px-16 bg-[#B7E39B] text-[#111111] text-center">
         <div className="max-w-[1400px] mx-auto flex flex-col items-center">
-          <h2 className="text-[2.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-medium leading-[0.95] tracking-[-0.03em] mb-12">
+          <h2 className="text-[2rem] md:text-[3.5rem] lg:text-[4.5rem] font-medium leading-[0.95] tracking-[-0.03em] mb-12">
             Request Enrollment <br className="hidden md:block"/> Workshop
           </h2>
-          <p className="text-xl lg:text-[1.75rem] opacity-80 mb-16 font-medium leading-[1.5] max-w-[1000px] mx-auto">
+          <p className="text-lg lg:text-[1.5rem] opacity-80 mb-16 font-medium leading-[1.5] max-w-[1000px] mx-auto">
             One institution will receive a complimentary 1:1 Enrollment Acceleration Workshop — a private working session with Gravity experts focused on identifying enrollment friction and mapping growth opportunities.
           </p>
           <button 
