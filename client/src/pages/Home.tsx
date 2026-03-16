@@ -135,11 +135,11 @@ export default function Home() {
           <p className="text-center text-white/50 text-[11px] font-semibold tracking-[0.25em] uppercase mb-16">Trusted by Leading Institutions</p>
           
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-12 md:gap-x-16 lg:gap-x-20 opacity-70">
-            <img src="/assets/houston-logo.png" alt="University of Houston" className="h-[28px] md:h-[34px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/incommon-logo.png" alt="InCommon" className="h-[36px] md:h-[46px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/montgomery-logo.png" alt="Montgomery College" className="h-[28px] md:h-[34px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/northwestern-logo-new.png" alt="Northwestern University" className="h-[46px] md:h-[58px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/washington-logo.png" alt="University of Washington" className="h-[52px] md:h-[65px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain w-full md:w-auto mt-4 md:mt-0" />
+            <img src="/assets/houston-logo.png" alt="University of Houston" className="h-[56px] md:h-[72px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/incommon-logo.png" alt="InCommon" className="h-[64px] md:h-[84px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/montgomery-logo.png" alt="Montgomery College" className="h-[36px] md:h-[48px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/northwestern-logo-new.png" alt="Northwestern University" className="h-[72px] md:h-[96px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="/assets/washington-logo.png" alt="University of Washington" className="h-[80px] md:h-[104px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain w-full md:w-auto mt-4 md:mt-0" />
           </div>
         </div>
       </section>
