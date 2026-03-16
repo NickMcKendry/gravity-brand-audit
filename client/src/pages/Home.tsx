@@ -166,7 +166,7 @@ export default function Home() {
          
          {/* Slide 1: Montgomery College */}
          <div className="sticky top-0 min-h-screen w-full flex items-center bg-[#111111] pt-24 pb-24 lg:pt-32 lg:pb-32">
-            <div className="max-w-[1500px] mx-auto w-full grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-32 items-center">
+            <div className="max-w-[1500px] mx-auto w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                
                <div className="flex flex-col gap-8 lg:gap-10">
                   <div>
@@ -175,7 +175,7 @@ export default function Home() {
                       <ScrollRevealText text="Showcasing Exceptional Education & Extraordinary Outcomes" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
-                  <div className="space-y-6 text-white text-lg lg:text-xl font-light leading-[1.6]">
+                  <div className="space-y-4 lg:space-y-6 text-white text-base lg:text-lg font-light leading-[1.6]">
                     <p>
                       <strong className="text-white font-medium">The Challenge:</strong> <br/>
                       <ScrollRevealText text="Montgomery College set out to reframe its story—shifting perceptions of what a community college can be. Widely recognized as Maryland’s top community college and a nationally ranked institution, the College wanted to showcase the transformative outcomes already happening on its campuses and in its community. The goal was to attract more students, deepen pride among alumni and stakeholders, and unify teams around a shared vision. Yet internal silos, inconsistent data practices, and differing perspectives on brand priorities made it challenging to present one clear, compelling story to the world." startOffset={0.9} endOffset={0.6} />
@@ -185,8 +185,8 @@ export default function Home() {
                       <ScrollRevealText text="Gravity began by engaging deeply with the college community through workshops and learner surveys, capturing authentic experiences across students, faculty, staff, and alumni. These insights informed the development of a new brand platform and visual identity anchored by the unifying message, “Exceptional Education. Extraordinary Outcomes.” To support long-term adoption, we helped align internal teams through brand training, organizational process improvements, and a clear brand architecture, enabling Montgomery College to communicate a cohesive and aspirational story across its enrollment and engagement efforts." startOffset={0.9} endOffset={0.6} />
                     </p>
                   </div>
-                  <div className="pt-12 border-t border-white/10 mt-6">
-                     <ul className="space-y-4 text-lg lg:text-xl font-light text-white">
+                  <div className="pt-8 lg:pt-12 border-t border-white/10 mt-6">
+                     <ul className="space-y-3 lg:space-y-4 text-base lg:text-lg font-light text-white">
                        <li className="flex gap-4 items-start">
                          <span className="text-[#B7E39B] font-medium mt-1">/</span>
                          <ScrollRevealText text="Strong internal adoption and enthusiasm across leadership, faculty, students, and alumni" startOffset={0.9} endOffset={0.7} />
@@ -221,14 +221,14 @@ export default function Home() {
 
                <div className="flex flex-col gap-6 w-full max-h-[85vh] overflow-hidden">
                   <div className="w-full aspect-[16/9] relative overflow-hidden bg-[#1a1a1a]">
-                     <img src="/assets/mc-sign.jpg" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="Montgomery College Sign" />
+                     <img src="/assets/mc-sign.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-[1.03]" alt="Montgomery College Sign" />
                   </div>
                   <div className="grid grid-cols-2 gap-6 h-full">
                      <div className="w-full aspect-square relative overflow-hidden bg-[#1a1a1a]">
-                        <img src="/assets/mc-student-lab.jpg" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="Student in lab" />
+                        <img src="/assets/mc-student-lab.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-[1.03]" alt="Student in lab" />
                      </div>
                      <div className="w-full aspect-square relative overflow-hidden bg-[#1a1a1a]">
-                        <img src="/assets/mc-signs.jpg" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="Montgomery College Event" />
+                        <img src="/assets/mc-signs.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-[1.03]" alt="Montgomery College Event" />
                      </div>
                   </div>
                </div>
@@ -238,7 +238,7 @@ export default function Home() {
 
          {/* Slide 2: California University */}
          <div className="sticky top-0 min-h-screen w-full flex items-center px-6 lg:px-16 bg-[#111111] pt-24 pb-24 lg:pt-32 lg:pb-32 border-t border-white/10 shadow-[0_-30px_60px_rgba(0,0,0,0.8)]">
-            <div className="max-w-[1500px] mx-auto w-full grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-32 items-center">
+            <div className="max-w-[1500px] mx-auto w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                
                <div className="flex flex-col gap-8 lg:gap-10">
                   <div>
@@ -247,7 +247,7 @@ export default function Home() {
                       <ScrollRevealText text="Research Powers Miracles at California University" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
-                  <div className="space-y-6 text-white text-lg lg:text-xl font-light leading-[1.6]">
+                  <div className="space-y-4 lg:space-y-6 text-white text-base lg:text-lg font-light leading-[1.6]">
                     <p>
                       <strong className="text-white font-medium">The Challenge:</strong> <br/>
                       <ScrollRevealText text="California University wanted a story that wouldn't feel like another 'university video.' It needed to feel warm and personal, not institutional, while speaking to a wide audience: donors, alumni, students, faculty, families, and leaders across the region and beyond. At the same time, the university was welcoming a new Chancellor and bringing a new connection initiative to life. So, the work needed to reflect connection in a way that invited people into the story." startOffset={0.9} endOffset={0.6} />
@@ -257,8 +257,8 @@ export default function Home() {
                       <ScrollRevealText text="Instead of big, general promises, California University had an opportunity to tell a true story only they could tell: research that directly changes a person's life, plus the community that makes those breakthroughs possible. By focusing on one real medical innovation and the people connected to it, the piece could:" startOffset={0.9} endOffset={0.6} />
                     </p>
                   </div>
-                  <div className="pt-12 border-t border-white/10 mt-6">
-                     <ul className="space-y-6 text-lg lg:text-xl font-light text-white">
+                  <div className="pt-8 lg:pt-12 border-t border-white/10 mt-6">
+                     <ul className="space-y-4 lg:space-y-6 text-base lg:text-lg font-light text-white">
                        <li className="flex gap-6 items-start">
                          <span className="text-[#B7E39B] font-medium">/</span>
                          <ScrollRevealText text="Show the university's impact beyond campus" startOffset={0.9} endOffset={0.7} />
@@ -283,7 +283,7 @@ export default function Home() {
                </div>
 
                <div className="w-full aspect-[4/3] lg:aspect-[3/4] max-h-[85vh] relative overflow-hidden bg-[#1a1a1a]">
-                  <img src="/assets/california-university.jpg" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="California University" />
+                  <img src="/assets/california-university.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-[1.03]" alt="California University" />
                </div>
 
             </div>
