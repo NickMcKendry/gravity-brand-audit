@@ -161,11 +161,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sticky Case Studies */}
-      <section id="work" className="relative w-full bg-[#111111]">
+      {/* Case Studies Section */}
+      <section className="py-24 lg:py-32 px-6 lg:px-16 bg-[#111111] relative z-20 border-t border-white/10">
          
          {/* Slide 1: Montgomery College */}
-         <div className="sticky top-0 min-h-screen w-full flex items-center px-6 lg:px-16 bg-[#111111] pt-32 pb-32 border-t border-white/10">
+         <div className="sticky top-0 min-h-screen w-full flex items-center bg-[#111111] pt-32 pb-32">
             <div className="max-w-[1500px] mx-auto w-full grid lg:grid-cols-[1fr_1.4fr] gap-16 lg:gap-32 items-center">
                
                <div className="flex flex-col gap-10">
@@ -219,8 +219,18 @@ export default function Home() {
                   </div>
                </div>
 
-               <div className="w-full aspect-[4/3] lg:aspect-[3/4] max-h-[85vh] relative overflow-hidden bg-[#1a1a1a]">
-                  <img src="/assets/montgomery-college.jpg" className="w-full h-full object-cover opacity-60 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="Montgomery College" />
+               <div className="flex flex-col gap-6 w-full max-h-[85vh] overflow-hidden">
+                  <div className="w-full aspect-[16/9] relative overflow-hidden bg-[#1a1a1a]">
+                     <img src="/assets/mc-sign.jpg" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="Montgomery College Sign" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-6 h-full">
+                     <div className="w-full aspect-square relative overflow-hidden bg-[#1a1a1a]">
+                        <img src="/assets/mc-student-lab.jpg" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="Student in lab" />
+                     </div>
+                     <div className="w-full aspect-square relative overflow-hidden bg-[#1a1a1a]">
+                        <img src="/assets/mc-signs.jpg" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-all duration-1000 hover:scale-[1.03] grayscale hover:grayscale-0" alt="Montgomery College Event" />
+                     </div>
+                  </div>
                </div>
 
             </div>
