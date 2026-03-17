@@ -55,37 +55,13 @@ export default function Home() {
   const [isWorkshopModalOpen, setIsWorkshopModalOpen] = useState(false);
 
   useEffect(() => {
-    if (isWorkshopModalOpen) {
-      // Load HubSpot script if it doesn't exist
-      if (!document.getElementById('hs-script-loader')) {
-        const script = document.createElement('script');
-        script.id = 'hs-script-loader';
-        script.src = '//js.hsforms.net/forms/embed/v2.js';
-        script.charset = 'utf-8';
-        script.type = 'text/javascript';
-        document.body.appendChild(script);
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
 
-        script.addEventListener('load', () => {
-          if (window.hbspt) {
-            window.hbspt.forms.create({
-              region: "na1",
-              portalId: "23253342",
-              formId: "12868791-924c-464b-b8ac-f4cf993011e8",
-              target: '#hubspot-workshop-form'
-            });
-          }
-        });
-      } else if (window.hbspt) {
-        // Script already loaded, just render the form
-        window.hbspt.forms.create({
-          region: "na1",
-          portalId: "23253342",
-          formId: "12868791-924c-464b-b8ac-f4cf993011e8",
-          target: '#hubspot-workshop-form'
-        });
-      }
-    }
-  }, [isWorkshopModalOpen]);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const DiagonalArrow = ({ className = "" }: { className?: string }) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter" className={className}>
@@ -141,7 +117,9 @@ export default function Home() {
                  <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                </button>
                <button 
-                 onClick={() => setIsWorkshopModalOpen(true)}
+                 onClick={() => {
+                   document.getElementById('audit')?.scrollIntoView({ behavior: 'smooth' });
+                 }}
                  className="group flex items-center justify-between gap-8 border border-white/30 bg-black/20 backdrop-blur-sm hover:border-white text-white transition-all duration-300 px-8 py-4 text-base font-medium min-w-[280px]"
                >
                  <span className="tracking-wide">Request Workshop</span>
@@ -401,9 +379,12 @@ export default function Home() {
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
-            <div className="w-full h-full pt-16 pb-4 px-4 bg-white overflow-y-auto">
-              {/* HubSpot requires forms to be rendered via their script on custom domains when using the long-form IDs instead of short share links */}
-              <div id="hubspot-workshop-form" className="w-full h-full" />
+            <div className="w-full h-full pt-16 pb-4 px-4 bg-white">
+              <iframe 
+                src="https://share.hsforms.com/23253342/12868791-924c-464b-b8ac-f4cf993011e8" 
+                className="w-full h-full border-none rounded-lg"
+                title="Request Workshop Form"
+              />
             </div>
           </div>
         </div>
