@@ -265,19 +265,19 @@ export default function Home() {
                
                <div className="flex flex-col gap-8 lg:gap-10">
                   <div>
-                    <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">California University</p>
+                    <p className="text-[#B7E39B] text-[12px] font-semibold tracking-[0.25em] uppercase mb-8">Public University in California</p>
                     <h2 className="text-[2.25rem] md:text-[3rem] lg:text-[4rem] leading-[1] font-medium text-white tracking-[-0.02em]">
-                      <ScrollRevealText text="Research Powers Miracles at California University" startOffset={0.9} endOffset={0.5} />
+                      <ScrollRevealText text="Research Powers Miracles at a Prominent Public University in California" startOffset={0.9} endOffset={0.5} />
                     </h2>
                   </div>
                   <div className="space-y-4 lg:space-y-6 text-white text-base lg:text-lg font-light leading-[1.6]">
                     <p>
                       <strong className="text-white font-medium">The Challenge:</strong> <br/>
-                      <ScrollRevealText text="California University wanted a story that wouldn't feel like another 'university video.' It needed to feel warm and personal, not institutional, while speaking to a wide audience: donors, alumni, students, faculty, families, and leaders across the region and beyond. At the same time, the university was welcoming a new Chancellor and bringing a new connection initiative to life. So, the work needed to reflect connection in a way that invited people into the story." startOffset={0.9} endOffset={0.6} />
+                      <ScrollRevealText text="A prominent public University in California wanted a story that wouldn't feel like another 'university video.' It needed to feel warm and personal, not institutional, while speaking to a wide audience: donors, alumni, students, faculty, families, and leaders across the region and beyond. At the same time, the university was welcoming a new Chancellor and bringing a new connection initiative to life. So, the work needed to reflect connection in a way that invited people into the story." startOffset={0.9} endOffset={0.6} />
                     </p>
                     <p>
                       <strong className="text-white font-medium">Our Approach:</strong> <br/>
-                      <ScrollRevealText text="Instead of big, general promises, California University had an opportunity to tell a true story only they could tell: research that directly changes a person's life, plus the community that makes those breakthroughs possible. By focusing on one real medical innovation and the people connected to it, the piece could:" startOffset={0.9} endOffset={0.6} />
+                      <ScrollRevealText text="Instead of big, general promises, this university had an opportunity to tell a true story only they could tell: research that directly changes a person's life, plus the community that makes those breakthroughs possible. By focusing on one real medical innovation and the people connected to it, the piece could:" startOffset={0.9} endOffset={0.6} />
                     </p>
                   </div>
                   <div className="pt-8 lg:pt-12 border-t border-white/10 mt-6">
