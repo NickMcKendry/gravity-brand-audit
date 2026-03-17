@@ -79,7 +79,7 @@ export default function Home() {
            <img src="/assets/gravity-logo.png" alt="Gravity Global" className="h-8 md:h-10 w-auto" />
         </div>
         <div className="pointer-events-auto hidden md:flex items-center gap-12 text-[12px] font-semibold tracking-[0.2em] uppercase mt-1">
-           <a href="#work" className="hover:opacity-50 transition-opacity duration-300">Work</a>
+           <a href="https://www.gravityglobal.com/work" target="_blank" rel="noopener noreferrer" className="hover:opacity-50 transition-opacity duration-300">Work</a>
            <a href="https://www.gravityglobal.com/services/public-sector" target="_blank" rel="noopener noreferrer" className="hover:opacity-50 transition-opacity duration-300">GPS</a>
            <a href="#assessment" className="hover:opacity-50 transition-opacity duration-300">Assessment</a>
         </div>
