@@ -52,6 +52,7 @@ const ScrollRevealText = ({ text, className = "", startOffset = 0.85, endOffset 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isWorkshopModalOpen, setIsWorkshopModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,9 +117,7 @@ export default function Home() {
                  <DiagonalArrow className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                </button>
                <button 
-                 onClick={() => {
-                   document.getElementById('audit')?.scrollIntoView({ behavior: 'smooth' });
-                 }}
+                 onClick={() => setIsWorkshopModalOpen(true)}
                  className="group flex items-center justify-between gap-8 border border-white/30 bg-black/20 backdrop-blur-sm hover:border-white text-white transition-all duration-300 px-8 py-4 text-base font-medium min-w-[280px]"
                >
                  <span className="tracking-wide">Request Workshop</span>
@@ -330,7 +329,7 @@ export default function Home() {
             One institution will receive a complimentary 1:1 Enrollment Acceleration Workshop — a private working session with Gravity experts focused on identifying enrollment friction and mapping growth opportunities.
           </p>
           <button 
-            onClick={() => window.open('https://form.typeform.com/to/f73a9593', '_blank')}
+            onClick={() => setIsWorkshopModalOpen(true)}
             className="group inline-flex items-center justify-between gap-12 border border-[#111111] bg-transparent hover:bg-[#111111] text-[#111111] hover:text-[#B7E39B] transition-all duration-300 px-12 py-6 font-medium text-xl w-full sm:w-auto min-w-[340px]"
           >
             <span className="tracking-wide">Request Workshop</span>
@@ -339,7 +338,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HubSpot Form Modal */}
+      {/* HubSpot Form Modal - Assessment */}
       {isModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity">
           <div className="relative w-full max-w-[800px] h-[85vh] max-h-[800px] bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col animate-in fade-in zoom-in-95 duration-200">
@@ -358,6 +357,31 @@ export default function Home() {
                 src="https://share.hsforms.com/29zqVk4T1Rc-xwdJjnC8csw3gji" 
                 className="w-full h-full border-none rounded-lg"
                 title="Enrollment Assessment Form"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* HubSpot Form Modal - Workshop */}
+      {isWorkshopModalOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm transition-opacity">
+          <div className="relative w-full max-w-[800px] h-[85vh] max-h-[800px] bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col animate-in fade-in zoom-in-95 duration-200">
+            <button 
+              onClick={() => setIsWorkshopModalOpen(false)}
+              className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
+              aria-label="Close modal"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <div className="w-full h-full pt-16 pb-4 px-4 bg-white">
+              <iframe 
+                src="https://share.hsforms.com/12868791-924c-464b-b8ac-f4cf993011e8" 
+                className="w-full h-full border-none rounded-lg"
+                title="Request Workshop Form"
               />
             </div>
           </div>
