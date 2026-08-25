@@ -76,7 +76,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed w-full z-50 top-0 py-8 px-6 lg:px-16 flex items-center justify-between pointer-events-none mix-blend-difference text-white">
         <div className="pointer-events-auto flex items-center">
-           <img src="/assets/gravity-logo.png" alt="Gravity Global" className="h-8 md:h-10 w-auto" />
+           <img src="assets/gravity-logo.png" alt="Gravity Global" className="h-8 md:h-10 w-auto" />
         </div>
         <div className="pointer-events-auto hidden md:flex items-center gap-12 text-[12px] font-semibold tracking-[0.2em] uppercase mt-1">
            <a href="https://www.gravityglobal.com/work" target="_blank" rel="noopener noreferrer" className="hover:opacity-50 transition-opacity duration-300">Work</a>
@@ -90,7 +90,7 @@ export default function Home() {
         
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-           <img src="/assets/hero-bg.jpg" className="w-full h-full object-cover opacity-40 mix-blend-luminosity" alt="" />
+           <img src="assets/hero-bg.jpg" className="w-full h-full object-cover opacity-40 mix-blend-luminosity" alt="" />
            <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/80 to-transparent"></div>
            <div className="absolute inset-0 bg-gradient-to-r from-[#111111] via-[#111111]/60 to-transparent"></div>
            <div className="absolute top-[-20%] right-[-10%] w-[50%] aspect-square rounded-full bg-[#B7E39B]/10 blur-[120px]"></div>
@@ -136,11 +136,11 @@ export default function Home() {
           <p className="text-center text-white/50 text-[11px] font-semibold tracking-[0.25em] uppercase mb-16">Trusted by Leading Institutions</p>
           
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-12 md:gap-x-16 lg:gap-x-20 opacity-70">
-            <img src="/assets/houston-logo.png" alt="University of Houston" className="h-[56px] md:h-[72px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/incommon-logo.png" alt="InCommon" className="h-[64px] md:h-[84px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/montgomery-logo.png" alt="Montgomery College" className="h-[36px] md:h-[48px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/northwestern-logo-new.png" alt="Northwestern University" className="h-[72px] md:h-[96px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
-            <img src="/assets/washington-logo.png" alt="University of Washington" className="h-[80px] md:h-[104px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain w-full md:w-auto mt-4 md:mt-0" />
+            <img src="assets/houston-logo.png" alt="University of Houston" className="h-[56px] md:h-[72px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="assets/incommon-logo.png" alt="InCommon" className="h-[64px] md:h-[84px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="assets/montgomery-logo.png" alt="Montgomery College" className="h-[36px] md:h-[48px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="assets/northwestern-logo-new.png" alt="Northwestern University" className="h-[72px] md:h-[96px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain" />
+            <img src="assets/washington-logo.png" alt="University of Washington" className="h-[80px] md:h-[104px] w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-all duration-300 object-contain w-full md:w-auto mt-4 md:mt-0" />
           </div>
         </div>
       </section>
@@ -222,14 +222,14 @@ export default function Home() {
 
                <div className="flex flex-col gap-6 w-full max-h-[85vh] overflow-hidden">
                   <div className="w-full aspect-[16/9] relative overflow-hidden bg-[#1a1a1a]">
-                     <img src="/assets/mc-sign.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-[1.03]" alt="Montgomery College Sign" />
+                     <img src="assets/mc-sign.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-[1.03]" alt="Montgomery College Sign" />
                   </div>
                   <div className="grid grid-cols-2 gap-6 h-full">
                      <div className="w-full aspect-square relative overflow-hidden bg-[#1a1a1a]">
-                        <img src="/assets/mc-student-lab.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-[1.03]" alt="Student in lab" />
+                        <img src="assets/mc-student-lab.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-[1.03]" alt="Student in lab" />
                      </div>
                      <div className="w-full aspect-square relative overflow-hidden bg-[#1a1a1a]">
-                        <img src="/assets/mc-signs.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-[1.03]" alt="Montgomery College Event" />
+                        <img src="assets/mc-signs.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-[1.03]" alt="Montgomery College Event" />
                      </div>
                   </div>
                </div>
@@ -284,7 +284,7 @@ export default function Home() {
                </div>
 
                <div className="w-full aspect-[4/3] lg:aspect-[3/4] max-h-[85vh] relative overflow-hidden bg-[#1a1a1a]">
-                  <img src="/assets/california-university.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-[1.03]" alt="California University" />
+                  <img src="assets/california-university.jpg" className="w-full h-full object-cover transition-transform duration-1000 hover:scale-[1.03]" alt="California University" />
                </div>
 
             </div>
@@ -394,7 +394,7 @@ export default function Home() {
       <footer className="py-24 px-6 lg:px-16 bg-[#111111] border-t border-white/10">
         <div className="max-w-[1500px] mx-auto flex flex-col lg:flex-row justify-between items-center gap-12">
           <div className="flex items-center">
-             <img src="/assets/gravity-logo.png" alt="Gravity Global" className="h-10 w-auto" />
+             <img src="assets/gravity-logo.png" alt="Gravity Global" className="h-10 w-auto" />
           </div>
           <div className="flex gap-16 text-[12px] text-white/50 uppercase tracking-[0.2em] font-semibold mt-1">
             <a href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</a>
